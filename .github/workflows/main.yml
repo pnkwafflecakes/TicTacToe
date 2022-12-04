@@ -23,3 +23,11 @@ jobs:
         run: cd ${GITHUB_WORKSPACE}/example/exampleWidgetQt && cmake -B../build -S.
       - id: make
         run: cd ${GITHUB_WORKSPACE}/example/build && make
+  linter:
+    runs-on: ubuntu_latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Super-Linter
+        uses: github/super-linter@v4.9.7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
