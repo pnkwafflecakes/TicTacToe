@@ -1,5 +1,5 @@
 
-name: Forscape App Compiles (ubuntu-latest gcc)
+name: hello_world App Compiles (ubuntu-latest gcc)
 on:
   pull_request:
   push:
