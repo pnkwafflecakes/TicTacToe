@@ -16,8 +16,47 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_button1_clicked()
 {
-    ui->pushButton->setText("Clicked");
+    ui->button1->setText("Clicked");
 }
 
+void MainWindow::on_button2_clicked()
+{
+    ui->button2->setText("Clicked");
+}
+
+void MainWindow::on_button3_clicked()
+{
+    ui->button3->setText("Clicked");
+}
+
+void MainWindow::on_button4_clicked()
+{
+    ui->button4->setText("Clicked");
+}
+
+void MainWindow::on_button5_clicked()
+{
+    ui->button5->setText("Clicked");
+}
+
+void MainWindow::on_button6_clicked()
+{
+    ui->button6->setText("Clicked");
+}
+
+void MainWindow::on_button7_clicked()
+{
+    ui->button7->setText("Clicked");
+}
+
+void MainWindow::on_button8_clicked()
+{
+    ui->button8->setText("Clicked");
+}
+
+void MainWindow::on_button9_clicked()
+{
+    ui->button9->setText("Clicked");
+}
