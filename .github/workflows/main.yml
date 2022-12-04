@@ -3,7 +3,7 @@ name: App Compiles
 on:
   pull_request:
   push:
-    branches: main
+    branches: integratedGUI-build-test
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
