@@ -1,29 +1,38 @@
 #include "MainWindow.h"
 #include "./ui_MainWindow.h"
+#include "./include/TicTacToeGame.h"
 
 #include <iostream>
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(TicTacToeGame* i_game, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    game = i_game;
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete game;
 }
 
 
 void MainWindow::on_button1_clicked()
 {
-    ui->button1->setText("X");
+    if (game->modifyTile(0, 0, game->getCurrentPlayer()->getLetter()) == true) {
+        const QString letter(game->getCurrentPlayer()->getLetter());
+        ui->button1->setText(letter);
+    }
 }
 
 void MainWindow::on_button2_clicked()
 {
-    ui->button2->setText("X");
+    if (game->modifyTile(0, 1, game->getCurrentPlayer()->getLetter()) == true) {
+        const QString letter(game->getCurrentPlayer()->getLetter());
+        ui->button1->setText(letter);
+    }
 }
 
 void MainWindow::on_button3_clicked()
