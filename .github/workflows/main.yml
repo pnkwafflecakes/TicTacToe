@@ -31,3 +31,16 @@ jobs:
         uses: github/super-linter@v4.9.7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Doxygen Action
+        uses: mattnotmitt/doxygen-action@1.9.4
+        with:
+          # Path to Doxyfile
+          doxyfile-path: ./docs/code/doxyfile # default is ./Doxyfile
+          # Working directory
+          working-directory: . # default is .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
