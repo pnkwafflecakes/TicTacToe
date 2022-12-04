@@ -14,117 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="button1">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>40</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button2">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>40</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button5">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>210</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button9">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>380</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button7">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>380</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button8">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>380</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button6">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>210</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button4">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>210</y>
-      <width>140</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Click Me</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button3">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>40</y>
-      <width>140</width>
-      <height>140</height>
+      <x>300</x>
+      <y>170</y>
+      <width>191</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="text">
