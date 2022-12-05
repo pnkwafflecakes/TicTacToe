@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     game->assignPlayer(player1);
     game->assignPlayer(player2);*/
     QApplication a(argc, argv);
-    MainWindow w();
+    MainWindow w;
     w.show();
     return a.exec();
 }
