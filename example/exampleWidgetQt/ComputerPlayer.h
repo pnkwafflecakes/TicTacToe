@@ -16,7 +16,7 @@
 
 class ComputerPlayer : public IPlayer {
  public:
-        ComputerPlayer(char letter, int playerNum, 
+        ComputerPlayer(char letter, int playerNum,
                         std::string const& difficulty);
 
         ComputerPlayer();
