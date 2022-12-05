@@ -13,10 +13,11 @@
 #include <vector>
 #include <stdexcept>
 
+
 ComputerPlayer::ComputerPlayer(char iLetter, int iPlayerNum,
                                 std::string const& iDifficulty) {
     if (iLetter == 'X' || iLetter== 'x' || iLetter == 'O' || iLetter == 'o') {
-        letter = static_cast<char>toupper(iLetter);
+        letter = static_cast<char>(toupper(iLetter));
     } else {
         letter = 0;
         throw std::invalid_argument("Invalid letter");
@@ -51,7 +52,7 @@ std::pair<int, int> ComputerPlayer::generateMove(IBoardGame* game) {
             }
         }
         // Generate random possible move
-        int moveIndex = rand_r() % moves.size();
+        int moveIndex = rand() % moves.size();
         return moves[moveIndex];
     }
     return std::pair<int, int>(-1, -1);
