@@ -3,7 +3,7 @@
 #include "IBoardGame.h"
 #include <string>
 
-class ComputerPlayer : private IPlayer {
+class ComputerPlayer : public IPlayer {
     public:
         ComputerPlayer(char letter, int playerNum, std::string const& difficulty);
 
