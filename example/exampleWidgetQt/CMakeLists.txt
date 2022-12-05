@@ -9,6 +9,15 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -59,6 +68,25 @@ set_target_properties(hello_world PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+enable_testing()
+
+add_executable(
+  TicTacToeGameTests
+  TicTacToeGameTests.cc
+  HumanPlayerTests
+  HumanPlayerTests.cc
+  ComputerPlayerTests
+  ComputerPlayerTests.cc
+)
+target_link_libraries(
+  TicTacToeGameTests
+  HumanPlayerTests
+  ComputerPlayerTests
+  GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(hello_test)
 
 install(TARGETS hello_world
     BUNDLE DESTINATION .
