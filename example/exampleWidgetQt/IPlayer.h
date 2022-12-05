@@ -1,5 +1,14 @@
+/**
+ * @file 
+ * @author 
+ * @brief 
+ * @version 
+ * @date 
+ * 
+ * @copyright Copyright (c) 2022
+ */
+
 #pragma once
-#include <string>
 #include "IBoardGame.h"
 #include <string>
 
@@ -7,7 +16,7 @@
 class IBoardGame;
 
 class IPlayer {
-public:
+ public:
     char letter;
     int playerNum;
     std::string type;
