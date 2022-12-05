@@ -12,21 +12,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-enable_testing()
-
-include_directories(example/exampleWidgetQt)
-add_subdirectory(example/exampleWidgetQt)
-add_subdirectory(test)
-
-FetchContent_Declare(
-  googletest
-  GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG        release-1.11.0
-)
-FetchContent_MakeAvailable(googletest)
-add_library(GTest::GTest INTERFACE IMPORTED)
-target_link_libraries(GTest::GTest INTERFACE gtest_main)
-
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(hello_world
         MANUAL_FINALIZATION
@@ -67,3 +52,20 @@ install(TARGETS hello_world
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(hello_world)
 endif()
+
+enable_testing()
+
+include_directories(example/exampleWidgetQt)
+add_subdirectory(example/exampleWidgetQt)
+add_subdirectory(test)
+
+FetchContent_Declare(
+  googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG        release-1.11.0
+)
+FetchContent_MakeAvailable(googletest)
+add_library(GTest::GTest INTERFACE IMPORTED)
+target_link_libraries(GTest::GTest INTERFACE gtest_main)
+
+
