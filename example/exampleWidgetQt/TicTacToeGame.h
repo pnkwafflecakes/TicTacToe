@@ -1,11 +1,23 @@
+/**
+ * @file 
+ * @author 
+ * @brief 
+ * @version 
+ * @date 
+ * 
+ * @copyright Copyright (c) 2022
+ */
+
 #pragma once
 #include "IBoardGame.h"
+#include "<vector>"
+#include "<utility>"
 
 class TicTacToeGame : private IBoardGame {
-  public:
+ public:
     TicTacToeGame();
 
-    ~TicTacToeGame();
+    explicit ~TicTacToeGame();
 
     TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players);
 
