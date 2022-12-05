@@ -106,12 +106,10 @@ Inheritance diagram for HumanPlayer:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1cae7389c9855d4ec4e8f69cbe37e372"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#a1cae7389c9855d4ec4e8f69cbe37e372">HumanPlayer</a> ()</td></tr>
 <tr class="separator:a1cae7389c9855d4ec4e8f69cbe37e372"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdeb9d120fc74c8d82ec0c688883f16f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#abdeb9d120fc74c8d82ec0c688883f16f">~HumanPlayer</a> ()</td></tr>
-<tr class="separator:abdeb9d120fc74c8d82ec0c688883f16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab97ab4fe15f90dc0eaa2fea05949f6e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#ab97ab4fe15f90dc0eaa2fea05949f6e4">HumanPlayer</a> (char <a class="el" href="class_i_player.html#a79a403c4ea7711a3a854a96eacd6eb56">letter</a>, int <a class="el" href="class_i_player.html#a4f4a2b213ddf99aa2134df29de3ba172">playerNum</a>)</td></tr>
 <tr class="separator:ab97ab4fe15f90dc0eaa2fea05949f6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b86ed6fabf0d662c16944c7ed09a6a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#a1b86ed6fabf0d662c16944c7ed09a6a3">clickTile</a> (int x, int y, std::unique_ptr&lt; <a class="el" href="class_i_board_game.html">IBoardGame</a> &gt; game)</td></tr>
-<tr class="separator:a1b86ed6fabf0d662c16944c7ed09a6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d966e66826edd2c42ea8f3582088b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#a74d966e66826edd2c42ea8f3582088b2">clickTile</a> (int x, int y, <a class="el" href="class_i_board_game.html">IBoardGame</a> *game)</td></tr>
+<tr class="separator:a74d966e66826edd2c42ea8f3582088b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a2fdfd19a0bf48214de9ed72b5f836a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#a6a2fdfd19a0bf48214de9ed72b5f836a">getLetter</a> ()</td></tr>
 <tr class="separator:a6a2fdfd19a0bf48214de9ed72b5f836a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f4e5c5ce24c39e7b723f5a2f8d463f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_human_player.html#a1f4e5c5ce24c39e7b723f5a2f8d463f9">getPlayerNum</a> ()</td></tr>
@@ -137,23 +135,6 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">HumanPlayer::HumanPlayer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abdeb9d120fc74c8d82ec0c688883f16f" name="abdeb9d120fc74c8d82ec0c688883f16f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdeb9d120fc74c8d82ec0c688883f16f">&#9670;&nbsp;</a></span>~HumanPlayer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">HumanPlayer::~HumanPlayer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -192,8 +173,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1b86ed6fabf0d662c16944c7ed09a6a3" name="a1b86ed6fabf0d662c16944c7ed09a6a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b86ed6fabf0d662c16944c7ed09a6a3">&#9670;&nbsp;</a></span>clickTile()</h2>
+<a id="a74d966e66826edd2c42ea8f3582088b2" name="a74d966e66826edd2c42ea8f3582088b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d966e66826edd2c42ea8f3582088b2">&#9670;&nbsp;</a></span>clickTile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +197,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_i_board_game.html">IBoardGame</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_i_board_game.html">IBoardGame</a> *&#160;</td>
           <td class="paramname"><em>game</em>&#160;</td>
         </tr>
         <tr>
@@ -232,7 +213,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_i_player.html#aaf9af589c7aff1c666c1e2d3439475f9">IPlayer</a>.</p>
+<p>Implements <a class="el" href="class_i_player.html#ac6d9e20a7c8162aa73c9c0b0f38ae917">IPlayer</a>.</p>
 
 </div>
 </div>
@@ -394,7 +375,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_human_player.html">HumanPlayer</a></li>
-    <li class="footer">Generated on Mon Dec 5 2022 22:41:50 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Mon Dec 5 2022 22:55:54 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

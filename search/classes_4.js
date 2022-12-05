@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['playerfactory_0',['PlayerFactory',['../class_player_factory.html',1,'']]]
+  ['tictactoegame_0',['TicTacToeGame',['../class_tic_tac_toe_game.html',1,'']]]
 ];
