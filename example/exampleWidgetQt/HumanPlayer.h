@@ -1,7 +1,7 @@
 #pragma once
 #include "IPlayer.h"
 #include "IBoardGame.h"
-class HumanPlayer : private IPlayer {
+class HumanPlayer : public IPlayer {
   public:
     HumanPlayer();
 

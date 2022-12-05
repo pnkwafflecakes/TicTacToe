@@ -45,6 +45,7 @@ std::pair<int, int> ComputerPlayer::generateMove(IBoardGame* game) {
         int moveIndex = rand() % moves.size();
         return moves[moveIndex];
     }
+    return std::pair<int, int>(-1, -1);
 }
 
 std::string ComputerPlayer::getDifficulty() {
