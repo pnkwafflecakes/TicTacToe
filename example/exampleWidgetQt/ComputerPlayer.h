@@ -2,10 +2,12 @@
 #include "IPlayer.h"
 #include "IBoardGame.h"
 #include <string>
+#include <utility>
 
 class ComputerPlayer : public IPlayer {
-    public:
-        ComputerPlayer(char letter, int playerNum, std::string const& difficulty);
+ public:
+        ComputerPlayer(char letter, int playerNum, 
+                        std::string const& difficulty);
 
         ComputerPlayer();
 
@@ -22,6 +24,6 @@ class ComputerPlayer : public IPlayer {
     int getPlayerNum();
 
         std::string getType();
-private:
+ private:
     std::string difficulty;
 };
