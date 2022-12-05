@@ -12,8 +12,8 @@
 #include "./ui_MainWindow.h"
 #include "TicTacToeGame.h"
 #include "HumanPlayer.h"
-#include <iostream>
 #include <QMessageBox>
+#include <iostream>
 #include <utility>
 
 MainWindow::MainWindow(TicTacToeGame* i_game, QWidget *parent)
@@ -153,15 +153,13 @@ void MainWindow::endGame() {
                 tr("TicTacToe"),
                 tr("Player-X Wins!"));
             newGamePopUp();
-        }
-        else if (game->checkEnd() == 1) {
+        } else if (game->checkEnd() == 1) {
             QMessageBox::information(
                 this,
                 tr("TicTacToe"),
                 tr("Player-O Wins!"));
             newGamePopUp();
-        }
-        else if (game->checkEnd() == 0) {
+        } else if (game->checkEnd() == 0) {
             QMessageBox::information(
                 this,
                 tr("TicTacToe"),
