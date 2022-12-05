@@ -23,7 +23,7 @@ class IBoardGame {
     std::pair<IPlayer*, IPlayer*> players;
     IPlayer* currentPlayer;
     int turn;
-    
+
     virtual void assignPlayer(IPlayer* player) = 0;
 
     virtual int checkEnd() = 0;

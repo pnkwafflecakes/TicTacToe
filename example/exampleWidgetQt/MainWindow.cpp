@@ -1,29 +1,37 @@
+/**
+ * @file 
+ * @author 
+ * @brief 
+ * @version 
+ * @date 
+ * 
+ * @copyright Copyright (c) 2022
+ */
+
 #include "MainWindow.h"
 #include "./ui_MainWindow.h"
 #include "TicTacToeGame.h"
 #include "HumanPlayer.h"
-#include <QMessageBox>
 #include <iostream>
+#include <QMessageBox>
+#include <utility>
 
 MainWindow::MainWindow(TicTacToeGame* i_game, QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+    , ui(new Ui::MainWindow) {
     ui->setupUi(this);
     game = i_game;
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
     delete game;
 }
 
 
-void MainWindow::on_button1_clicked()
-{
+void MainWindow::on_button1_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
-    
+
     if (game->modifyTile(0, 0, letter) == true) {
         const QString stringL(letter);
         ui->button1->setText(stringL);
@@ -34,8 +42,7 @@ void MainWindow::on_button1_clicked()
     }
 }
 
-void MainWindow::on_button2_clicked()
-{
+void MainWindow::on_button2_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(0, 1, letter) == true) {
         const QString stringL(letter);
@@ -47,8 +54,7 @@ void MainWindow::on_button2_clicked()
     }
 }
 
-void MainWindow::on_button3_clicked()
-{
+void MainWindow::on_button3_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(0, 2, letter) == true) {
         const QString stringL(letter);
@@ -59,8 +65,7 @@ void MainWindow::on_button3_clicked()
         }
     }
 }
-void MainWindow::on_button4_clicked()
-{
+void MainWindow::on_button4_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(1, 0, letter) == true) {
         const QString stringL(letter);
@@ -72,8 +77,7 @@ void MainWindow::on_button4_clicked()
     }
 }
 
-void MainWindow::on_button5_clicked()
-{
+void MainWindow::on_button5_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(1, 1, letter) == true) {
         const QString stringL(letter);
@@ -85,8 +89,7 @@ void MainWindow::on_button5_clicked()
     }
 }
 
-void MainWindow::on_button6_clicked()
-{
+void MainWindow::on_button6_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(1, 2, letter) == true) {
         const QString stringL(letter);
@@ -98,8 +101,7 @@ void MainWindow::on_button6_clicked()
     }
 }
 
-void MainWindow::on_button7_clicked()
-{
+void MainWindow::on_button7_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(2, 0, letter) == true) {
         const QString stringL(letter);
@@ -111,8 +113,7 @@ void MainWindow::on_button7_clicked()
     }
 }
 
-void MainWindow::on_button8_clicked()
-{
+void MainWindow::on_button8_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(2, 1, letter) == true) {
         const QString stringL(letter);
@@ -124,8 +125,7 @@ void MainWindow::on_button8_clicked()
     }
 }
 
-void MainWindow::on_button9_clicked()
-{
+void MainWindow::on_button9_clicked() {
     char letter = game->getCurrentPlayer()->getLetter();
     if (game->modifyTile(2, 2, letter) == true) {
         const QString stringL(letter);
@@ -140,8 +140,7 @@ void MainWindow::on_button9_clicked()
 bool MainWindow::gameOver() {
     if (game->checkEnd() == -1) {
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 }
@@ -174,13 +173,15 @@ void MainWindow::endGame() {
 
 void MainWindow::newGame() {
     std::pair<IPlayer*, IPlayer*> players = game->getPlayers();
-    HumanPlayer* player1 = new HumanPlayer(players.first->getLetter(), players.first->getPlayerNum());
-    HumanPlayer* player2 = new HumanPlayer(players.second->getLetter(), players.second->getPlayerNum());
+    HumanPlayer* player1 = new HumanPlayer(players.first->getLetter(),
+                                            players.first->getPlayerNum());
+    HumanPlayer* player2 = new HumanPlayer(players.second->getLetter(),
+                                            players.second->getPlayerNum());
     delete game;
     game = new TicTacToeGame();
     game->assignPlayer(player1);
     game->assignPlayer(player2);
-    
+
     ui->button1->setText("");
     ui->button2->setText("");
     ui->button3->setText("");
@@ -199,8 +200,7 @@ void MainWindow::newGamePopUp() {
         tr("New Game?"),
 
         QMessageBox::Yes |
-        QMessageBox::No))
-    {
+        QMessageBox::No)) {
     case QMessageBox::Yes:
         newGame();
         qDebug("yes");
