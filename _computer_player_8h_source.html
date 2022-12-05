@@ -86,44 +86,45 @@ $(document).ready(function(){initNavTree('_computer_player_8h_source.html',''); 
   <div class="headertitle"><div class="title">ComputerPlayer.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_computer_player_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_i_player_8h.html">IPlayer.h</a>&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_i_board_game_8h.html">IBoardGame.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_computer_player.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_computer_player.html">ComputerPlayer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_player.html">IPlayer</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <a class="code hl_function" href="class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27">ComputerPlayer</a>(<span class="keywordtype">char</span> <a class="code hl_variable" href="class_i_player.html#a79a403c4ea7711a3a854a96eacd6eb56">letter</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_i_player.html#a4f4a2b213ddf99aa2134df29de3ba172">playerNum</a>, </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                        std::string <span class="keyword">const</span>&amp; <a class="code hl_variable" href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">difficulty</a>);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <a class="code hl_function" href="class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27">ComputerPlayer</a>();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="class_computer_player.html#a20f26361bbb66b292e7f0792292e4250">~ComputerPlayer</a>();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_computer_player.html#ac8dee8c5b2b6f03e86a79a6420a5e09b">clickTile</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code hl_class" href="class_i_board_game.html">IBoardGame</a>* game);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::pair&lt;int, int&gt; <a class="code hl_function" href="class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c">generateMove</a>(<a class="code hl_class" href="class_i_board_game.html">IBoardGame</a>* game);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::string <a class="code hl_function" href="class_computer_player.html#a1901742283a477ba1974f715ec6c166a">getDifficulty</a>();</div>
+<a href="_computer_player_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_i_player_8h.html">IPlayer.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_i_board_game_8h.html">IBoardGame.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_computer_player.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_computer_player.html">ComputerPlayer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_player.html">IPlayer</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_function" href="class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27">ComputerPlayer</a>(<span class="keywordtype">char</span> <a class="code hl_variable" href="class_i_player.html#a79a403c4ea7711a3a854a96eacd6eb56">letter</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_i_player.html#a4f4a2b213ddf99aa2134df29de3ba172">playerNum</a>, </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                        std::string <span class="keyword">const</span>&amp; <a class="code hl_variable" href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">difficulty</a>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">char</span> <a class="code hl_function" href="class_computer_player.html#acfdb015e08f09f3a247a34001eaeaefe">getLetter</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27">ComputerPlayer</a>();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_computer_player.html#a5d8f726280a8d25a03807801fdf37987">getPlayerNum</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="class_computer_player.html#a20f26361bbb66b292e7f0792292e4250">~ComputerPlayer</a>();</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        std::string <a class="code hl_function" href="class_computer_player.html#a3d74072b7f737ac81f6008d75a7b41f8">getType</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">   28</a></span>    std::string <a class="code hl_variable" href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">difficulty</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_computer_player.html#ac8dee8c5b2b6f03e86a79a6420a5e09b">clickTile</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code hl_class" href="class_i_board_game.html">IBoardGame</a>* game);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        std::pair&lt;int, int&gt; <a class="code hl_function" href="class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c">generateMove</a>(<a class="code hl_class" href="class_i_board_game.html">IBoardGame</a>* game);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::string <a class="code hl_function" href="class_computer_player.html#a1901742283a477ba1974f715ec6c166a">getDifficulty</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">char</span> <a class="code hl_function" href="class_computer_player.html#acfdb015e08f09f3a247a34001eaeaefe">getLetter</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_computer_player.html#a5d8f726280a8d25a03807801fdf37987">getPlayerNum</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        std::string <a class="code hl_function" href="class_computer_player.html#a3d74072b7f737ac81f6008d75a7b41f8">getType</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">   38</a></span>    std::string <a class="code hl_variable" href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">difficulty</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
 <div class="ttc" id="a_i_board_game_8h_html"><div class="ttname"><a href="_i_board_game_8h.html">IBoardGame.h</a></div><div class="ttdoc">Interface for a 2D board game class.</div></div>
 <div class="ttc" id="a_i_player_8h_html"><div class="ttname"><a href="_i_player_8h.html">IPlayer.h</a></div></div>
-<div class="ttc" id="aclass_computer_player_html"><div class="ttname"><a href="class_computer_player.html">ComputerPlayer</a></div><div class="ttdef"><b>Definition:</b> ComputerPlayer.h:7</div></div>
+<div class="ttc" id="aclass_computer_player_html"><div class="ttname"><a href="class_computer_player.html">ComputerPlayer</a></div><div class="ttdef"><b>Definition:</b> ComputerPlayer.h:17</div></div>
 <div class="ttc" id="aclass_computer_player_html_a1901742283a477ba1974f715ec6c166a"><div class="ttname"><a href="class_computer_player.html#a1901742283a477ba1974f715ec6c166a">ComputerPlayer::getDifficulty</a></div><div class="ttdeci">std::string getDifficulty()</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:51</div></div>
 <div class="ttc" id="aclass_computer_player_html_a1f81f1c6b80e5e1775ba057a6e72861c"><div class="ttname"><a href="class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c">ComputerPlayer::generateMove</a></div><div class="ttdeci">std::pair&lt; int, int &gt; generateMove(IBoardGame *game)</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:31</div></div>
 <div class="ttc" id="aclass_computer_player_html_a20f26361bbb66b292e7f0792292e4250"><div class="ttname"><a href="class_computer_player.html#a20f26361bbb66b292e7f0792292e4250">ComputerPlayer::~ComputerPlayer</a></div><div class="ttdeci">~ComputerPlayer()</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:23</div></div>
 <div class="ttc" id="aclass_computer_player_html_a3d74072b7f737ac81f6008d75a7b41f8"><div class="ttname"><a href="class_computer_player.html#a3d74072b7f737ac81f6008d75a7b41f8">ComputerPlayer::getType</a></div><div class="ttdeci">std::string getType()</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:63</div></div>
 <div class="ttc" id="aclass_computer_player_html_a5d8f726280a8d25a03807801fdf37987"><div class="ttname"><a href="class_computer_player.html#a5d8f726280a8d25a03807801fdf37987">ComputerPlayer::getPlayerNum</a></div><div class="ttdeci">int getPlayerNum()</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:59</div></div>
-<div class="ttc" id="aclass_computer_player_html_a9723900ad9f0151f926c9f83b397401b"><div class="ttname"><a href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">ComputerPlayer::difficulty</a></div><div class="ttdeci">std::string difficulty</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.h:28</div></div>
+<div class="ttc" id="aclass_computer_player_html_a9723900ad9f0151f926c9f83b397401b"><div class="ttname"><a href="class_computer_player.html#a9723900ad9f0151f926c9f83b397401b">ComputerPlayer::difficulty</a></div><div class="ttdeci">std::string difficulty</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.h:38</div></div>
 <div class="ttc" id="aclass_computer_player_html_ac8dee8c5b2b6f03e86a79a6420a5e09b"><div class="ttname"><a href="class_computer_player.html#ac8dee8c5b2b6f03e86a79a6420a5e09b">ComputerPlayer::clickTile</a></div><div class="ttdeci">void clickTile(int x, int y, IBoardGame *game)</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:27</div></div>
 <div class="ttc" id="aclass_computer_player_html_acfdb015e08f09f3a247a34001eaeaefe"><div class="ttname"><a href="class_computer_player.html#acfdb015e08f09f3a247a34001eaeaefe">ComputerPlayer::getLetter</a></div><div class="ttdeci">char getLetter()</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:55</div></div>
 <div class="ttc" id="aclass_computer_player_html_aef4695dfc6a32d1c8b44b1e944706a27"><div class="ttname"><a href="class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27">ComputerPlayer::ComputerPlayer</a></div><div class="ttdeci">ComputerPlayer()</div><div class="ttdef"><b>Definition:</b> ComputerPlayer.cpp:19</div></div>
@@ -137,7 +138,7 @@ $(document).ready(function(){initNavTree('_computer_player_8h_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cfafba98a580ce4b62f8a6fa96d7cbb0.html">example</a></li><li class="navelem"><a class="el" href="dir_1ed6cce92913f34dd44c910dbcf604d5.html">exampleWidgetQt</a></li><li class="navelem"><a class="el" href="_computer_player_8h.html">ComputerPlayer.h</a></li>
-    <li class="footer">Generated on Mon Dec 5 2022 04:47:24 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Mon Dec 5 2022 04:48:10 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
