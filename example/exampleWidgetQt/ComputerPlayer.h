@@ -1,3 +1,13 @@
+/**
+ * @file 
+ * @author 
+ * @brief 
+ * @version 
+ * @date 
+ * 
+ * @copyright Copyright (c) 2022
+ */
+
 #pragma once
 #include "IPlayer.h"
 #include "IBoardGame.h"
