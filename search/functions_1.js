@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['on_5fbutton1_5fclicked_0',['on_button1_clicked',['../class_main_window.html#a12cb96e60bb290acdd63a75b4ea88e3c',1,'MainWindow']]],
-  ['on_5fbutton2_5fclicked_1',['on_button2_clicked',['../class_main_window.html#ab2814bd99cd68f3cae8c089e617b62a1',1,'MainWindow']]],
-  ['on_5fbutton3_5fclicked_2',['on_button3_clicked',['../class_main_window.html#ac4d3d75d4fab14b1f2fd6fc126ecb438',1,'MainWindow']]],
-  ['on_5fbutton4_5fclicked_3',['on_button4_clicked',['../class_main_window.html#a1033d0dff4a4bd16e059c9731e385411',1,'MainWindow']]],
-  ['on_5fbutton5_5fclicked_4',['on_button5_clicked',['../class_main_window.html#a39b70af9150eec4a472dc6657fc40fd9',1,'MainWindow']]],
-  ['on_5fbutton6_5fclicked_5',['on_button6_clicked',['../class_main_window.html#adc0b6624f3e0301f32b878670079fc3e',1,'MainWindow']]],
-  ['on_5fbutton7_5fclicked_6',['on_button7_clicked',['../class_main_window.html#a56746f12f47752e1a042726fb6dcc62b',1,'MainWindow']]],
-  ['on_5fbutton8_5fclicked_7',['on_button8_clicked',['../class_main_window.html#a8d62ea3c9b5332d6b9065bf267a35bfb',1,'MainWindow']]],
-  ['on_5fbutton9_5fclicked_8',['on_button9_clicked',['../class_main_window.html#a481780b28037bd6649a16c92b05efc6b',1,'MainWindow']]]
+  ['checkend_0',['checkEnd',['../class_i_board_game.html#a89f9b1bc99ef29686b14260ae9a78f8f',1,'IBoardGame::checkEnd()'],['../class_tic_tac_toe_game.html#a057e05a487394deb6af5372b2049de63',1,'TicTacToeGame::checkEnd()']]],
+  ['clicktile_1',['clickTile',['../class_computer_player.html#ac8dee8c5b2b6f03e86a79a6420a5e09b',1,'ComputerPlayer::clickTile()'],['../class_human_player.html#a74d966e66826edd2c42ea8f3582088b2',1,'HumanPlayer::clickTile()'],['../class_i_player.html#ac6d9e20a7c8162aa73c9c0b0f38ae917',1,'IPlayer::clickTile()']]],
+  ['computerplayer_2',['ComputerPlayer',['../class_computer_player.html#a9e42fe14e5551fafa4de5b80182ad8dd',1,'ComputerPlayer::ComputerPlayer(char letter, int playerNum, std::string const &amp;difficulty)'],['../class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27',1,'ComputerPlayer::ComputerPlayer()']]],
+  ['createboard_3',['createBoard',['../class_i_board_game.html#ae069194ac062ce9f0df17042034e49af',1,'IBoardGame::createBoard()'],['../class_tic_tac_toe_game.html#a2aa68367fe20075b20bc737b5978f1b9',1,'TicTacToeGame::createBoard()']]]
 ];

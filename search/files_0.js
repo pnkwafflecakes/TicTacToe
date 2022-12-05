@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_2ecpp_0',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['mainwindow_2ecpp_1',['MainWindow.cpp',['../_main_window_8cpp.html',1,'']]],
-  ['mainwindow_2eh_2',['MainWindow.h',['../_main_window_8h.html',1,'']]]
+  ['computerplayer_2ecpp_0',['ComputerPlayer.cpp',['../_computer_player_8cpp.html',1,'']]],
+  ['computerplayer_2eh_1',['ComputerPlayer.h',['../_computer_player_8h.html',1,'']]]
 ];

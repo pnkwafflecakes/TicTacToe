@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ui_0',['ui',['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow']]]
+  ['board_0',['board',['../class_i_board_game.html#a44c953788b90db5034c0877fbb8693a5',1,'IBoardGame']]]
 ];

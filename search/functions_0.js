@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['mainwindow_1',['MainWindow',['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]]
+  ['assignplayer_0',['assignPlayer',['../class_i_board_game.html#a3324167438ce8c4eb2d6da2e47b84b19',1,'IBoardGame::assignPlayer()'],['../class_tic_tac_toe_game.html#aaefd221a4c5e9f0bbaede66cdb9a4f9d',1,'TicTacToeGame::assignPlayer()']]]
 ];
