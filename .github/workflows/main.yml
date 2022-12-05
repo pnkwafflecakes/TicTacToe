@@ -23,6 +23,21 @@ jobs:
         run: cd "${GITHUB_WORKSPACE}"/example/exampleWidgetQt && cmake -B../build -S.
       - id: make
         run: cd "${GITHUB_WORKSPACE}"/example/build && make
+      - name: Install gtest
+        run: |
+          wget https://github.com/google/googletest/archive/release-1.10.0.tar.gz
+          tar xf release-1.10.0.tar.gz
+          cd googletest-release-1.10.0
+          cmake -DBUILD_SHARED_LIBS=OFF .
+          sudo make install
+      - name: Run Tests
+        run: |
+          mkdir build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-Werror" ..
+          make
+          /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
+
   lint:
     runs-on: ubuntu-latest
     steps:
