@@ -30,17 +30,17 @@ jobs:
       - name: Super-Linter
         uses: github/super-linter@v4.9.7
         env:
+          VALIDATE_CLANG_FORMAT: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@1.9.4
+      - name: Doxygenize
+        uses: langroodi/doxygenize@v1.7.0
         with:
-          # Path to Doxyfile
-          doxyfile-path: ./docs/code/doxyfile # default is ./Doxyfile
-          # Working directory
-          working-directory: . # default is .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Doxygen configuration file path
+          doxygenconf: ./docs/code/doxyfile
+          # Generated HTML documents output folder
+          htmloutput: ./docs
+          darkmode: true
