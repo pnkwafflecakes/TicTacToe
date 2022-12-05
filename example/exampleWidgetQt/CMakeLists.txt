@@ -86,7 +86,8 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-gtest_discover_tests(hello_test)
+gtest_discover_tests(TicTacToeGameTests, HumanPlayerTests,
+    ComputerPlayerTests)
 
 install(TARGETS hello_world
     BUNDLE DESTINATION .
