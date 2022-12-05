@@ -23,7 +23,7 @@ class ComputerPlayer : public IPlayer {
 
         ~ComputerPlayer();
 
-        void clickTile(int x, int y, IBoardGame* game);
+        void clickTile(int x, int y, std::unique_ptr<IBoardGame> game);
 
         std::pair<int, int> generateMove(IBoardGame* game);
 

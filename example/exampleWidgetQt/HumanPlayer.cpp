@@ -16,6 +16,10 @@ HumanPlayer::HumanPlayer() {
     type = "human";
 }
 
+HumanPlayer::~HumanPlayer() {
+
+}
+
 HumanPlayer::HumanPlayer(char iLetter, int playerNum) {
     if (iLetter == 'X' || iLetter == 'x' || iLetter == 'O' || iLetter == 'o') {
         letter = static_cast<char>(toupper(iLetter));
@@ -27,7 +31,7 @@ HumanPlayer::HumanPlayer(char iLetter, int playerNum) {
     this->type = "human";
 }
 
-void HumanPlayer::clickTile(int x, int y, IBoardGame* game) {
+void HumanPlayer::clickTile(int x, int y, std::unique_ptr<IBoardGame> game) {
     game->modifyTile(x, y, letter);
 }
 

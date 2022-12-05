@@ -13,6 +13,7 @@
 #include "IPlayer.h"
 #include <vector>
 #include <utility>
+#include <memory>
 
 // forward declaration
 class IPlayer;
@@ -20,11 +21,11 @@ class IPlayer;
 class IBoardGame {
  public:
     std::vector<std::vector<char>> board;
-    std::pair<IPlayer*, IPlayer*> players;
-    IPlayer* currentPlayer;
+    std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> players;
+    char currentLetter;
     int turn;
 
-    virtual void assignPlayer(IPlayer* player) = 0;
+    virtual void assignPlayer(std::unique_ptr<IPlayer> player) = 0;
 
     virtual int checkEnd() = 0;
 
@@ -38,13 +39,13 @@ class IBoardGame {
 
     virtual int getBoardSize() = 0;
 
-    virtual IPlayer* getCurrentPlayer() = 0;
+    virtual char getCurrentLetter() = 0;
 
     virtual int getTurn() = 0;
 
-    virtual std::pair<IPlayer*, IPlayer*> getPlayers() = 0;
+    //virtual std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> getPlayers() = 0;
 
     virtual void setBoard(std::vector <std::vector<char>> board) = 0;
 
-    virtual void setPlayers(std::pair<IPlayer*, IPlayer*> i_players) = 0;
+    virtual void setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) = 0;
 };
