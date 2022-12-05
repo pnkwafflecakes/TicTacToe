@@ -23,16 +23,6 @@ jobs:
         run: cd "${GITHUB_WORKSPACE}"/example/exampleWidgetQt && cmake -B../build -S.
       - id: make
         run: cd "${GITHUB_WORKSPACE}"/example/build && make
-      - name: Install gtest
-        run: |
-          cd ~
-          git clone https://github.com/google/googletest.git
-          cd googletest
-          mkdir build && cd build
-          cmake .. -DBUILD_SHARED_LIBS=ON -DINSTALL_GTEST=ON -DCMAKE_INSTALL_PREFIX:PATH=/usr
-          make -j8
-          sudo make install
-          sudo ldconfig
       - name: Run Tests
         run: |
           mkdir build
