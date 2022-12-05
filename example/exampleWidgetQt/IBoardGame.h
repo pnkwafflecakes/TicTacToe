@@ -12,23 +12,23 @@
 #pragma once
 #include "IPlayer.h"
 #include <vector>
+#include <utility>
 
 // forward declaration
 class IPlayer;
 
 class IBoardGame {
-public:
+ public:
     std::vector<std::vector<char>> board;
     std::pair<IPlayer*, IPlayer*> players;
     IPlayer* currentPlayer;
     int turn;
-    
-    
-    virtual void assignPlayer(IPlayer* player) = 0; 
+
+    virtual void assignPlayer(IPlayer* player) = 0;
 
     virtual int checkEnd() = 0;
 
-    virtual void createBoard(int size) = 0; 
+    virtual void createBoard(int size) = 0;
 
     virtual void endTurn() = 0;
 

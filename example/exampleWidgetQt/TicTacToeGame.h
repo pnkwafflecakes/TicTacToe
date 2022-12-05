@@ -10,16 +10,16 @@
 
 #pragma once
 #include "IBoardGame.h"
-#include "<vector>"
-#include "<utility>"
+#include <vector>
+#include <utility>
 
 class TicTacToeGame : private IBoardGame {
  public:
     TicTacToeGame();
 
-    explicit ~TicTacToeGame();
+    ~TicTacToeGame();
 
-    TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players);
+    explicit TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players);
 
     TicTacToeGame(int size, std::pair<IPlayer*, IPlayer*> i_players);
 
