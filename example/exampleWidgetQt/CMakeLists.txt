@@ -17,6 +17,14 @@ set(PROJECT_SOURCES
         MainWindow.cpp
         MainWindow.h
         MainWindow.ui
+        ComputerPlayer.cpp
+        ComputerPlayer.h
+        HumanPlayer.cpp
+        HumanPlayer.h
+        IBoardGame.h
+        IPlayer.h
+        TicTacToeGame.cpp
+        TicTacToeGame.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

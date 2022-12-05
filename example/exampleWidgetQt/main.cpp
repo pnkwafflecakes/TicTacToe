@@ -1,6 +1,6 @@
 #include "MainWindow.h"
-#include "./include/TicTacToeGame.h"
-#include "include/HumanPlayer.h"
+#include "TicTacToeGame.h"
+#include "HumanPlayer.h"
 #include <QApplication>
 
 
