@@ -9,12 +9,12 @@
  */
 
 #include "MainWindow.h"
-#include "./ui_MainWindow.h"
-#include "TicTacToeGame.h"
-#include "HumanPlayer.h"
 #include <QMessageBox>
 #include <iostream>
 #include <utility>
+#include "./ui_MainWindow.h"
+#include "TicTacToeGame.h"
+#include "HumanPlayer.h"
 
 MainWindow::MainWindow(TicTacToeGame* i_game, QWidget *parent)
     : QMainWindow(parent)
