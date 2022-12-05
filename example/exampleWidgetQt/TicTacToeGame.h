@@ -19,11 +19,11 @@ class TicTacToeGame : private IBoardGame {
 
     ~TicTacToeGame();
 
-    explicit TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players);
+    TicTacToeGame(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players);
 
-    TicTacToeGame(int size, std::pair<IPlayer*, IPlayer*> i_players);
+    TicTacToeGame(int size, std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players);
 
-    void assignPlayer(IPlayer* player);
+    void assignPlayer(std::unique_ptr<IPlayer> player);
 
     int checkEnd();
 
@@ -37,13 +37,13 @@ class TicTacToeGame : private IBoardGame {
 
     int getBoardSize();
 
-    IPlayer* getCurrentPlayer();
+    char getCurrentLetter();
 
     int getTurn();
 
-    std::pair<IPlayer*, IPlayer*> getPlayers();
+    //std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> getPlayers();
 
     void setBoard(std::vector<std::vector<char>> board);
 
-    void setPlayers(std::pair<IPlayer*, IPlayer*> i_player);
+    void setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_player);
 };

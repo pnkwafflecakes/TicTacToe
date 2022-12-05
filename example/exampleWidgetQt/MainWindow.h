@@ -22,7 +22,7 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
  public:
-    explicit MainWindow(TicTacToeGame* game, QWidget* parent = nullptr);
+    explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
     bool gameOver();
     void endGame();
@@ -42,6 +42,8 @@ class MainWindow : public QMainWindow {
 
  private:
     Ui::MainWindow *ui;
-    TicTacToeGame* game;
+    std::unique_ptr<TicTacToeGame> game;
+    std::unique_ptr<IPlayer> player1;
+    std::unique_ptr<IPlayer> player2;
 };
 #endif  // MAINWINDOW_H

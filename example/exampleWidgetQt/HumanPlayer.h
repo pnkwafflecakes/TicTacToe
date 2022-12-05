@@ -17,9 +17,11 @@ class HumanPlayer : public IPlayer {
  public:
     HumanPlayer();
 
+    ~HumanPlayer();
+
     HumanPlayer(char letter, int playerNum);
 
-    void clickTile(int x, int y, IBoardGame* game);
+    void clickTile(int x, int y, std::unique_ptr<IBoardGame> game);
 
     char getLetter();
 

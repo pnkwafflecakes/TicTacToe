@@ -34,7 +34,7 @@ ComputerPlayer::ComputerPlayer() {
 ComputerPlayer::~ComputerPlayer() {
 }
 
-void ComputerPlayer::clickTile(int x, int y, IBoardGame* game) {
+void ComputerPlayer::clickTile(int x, int y, std::unique_ptr<IBoardGame> game) {
     game->modifyTile(x, y, this->letter);
 }
 

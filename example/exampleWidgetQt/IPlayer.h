@@ -11,6 +11,7 @@
 #pragma once
 #include "IBoardGame.h"
 #include <string>
+#include <memory>
 
 // forward declaration
 class IBoardGame;
@@ -21,7 +22,7 @@ class IPlayer {
     int playerNum;
     std::string type;
 
-    virtual void clickTile(int x, int y, IBoardGame* game) = 0;
+    virtual void clickTile(int x, int y, std::unique_ptr<IBoardGame> game) = 0;
 
     virtual char getLetter() = 0;
 

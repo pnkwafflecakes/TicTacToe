@@ -18,41 +18,38 @@ TicTacToeGame::TicTacToeGame() {
     players.first = nullptr;
     players.second = nullptr;
     createBoard(3);
-    currentPlayer = nullptr;
+    currentLetter = 'N';
 }
 
 TicTacToeGame::~TicTacToeGame() {
-    if (players.first != nullptr) {
-        delete players.first;
-    }
-    if (players.second != nullptr) {
-        delete players.second;
-    }
+    
 }
 
-TicTacToeGame::TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players) {
+TicTacToeGame::TicTacToeGame(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) {
     turn = 0;
-    players = i_players;
-    currentPlayer = i_players.first;
+    players.first = std::move(i_players.first);
+    players.second = std::move(i_players.second);
+    currentLetter = players.first.get()->getLetter();
     createBoard(3);
 }
 
 TicTacToeGame::TicTacToeGame(int size,
-                            std::pair<IPlayer*, IPlayer*> i_players) {
+                            std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) {
     turn = 0;
-    players = i_players;
-    currentPlayer = players.first;
+    players.first.reset(i_players.first.get());
+    players.second = std::move(i_players.second);
+    currentLetter = players.first.get()->getLetter();
     createBoard(size);
 }
 
-void TicTacToeGame::assignPlayer(IPlayer* player) {
+void TicTacToeGame::assignPlayer(std::unique_ptr<IPlayer> player) {
     if (player == nullptr) {
         throw std::invalid_argument("Null player!");
-    } else if (players.first == nullptr) {
-        players.first = player;
-        currentPlayer = players.first;
-    } else if (players.second == nullptr) {
-        players.second = player;
+    } else if (players.first.get() == nullptr) {
+        players.first = std::move(player);
+        currentLetter = players.first.get()->getLetter();
+    } else if (players.second.get() == nullptr) {
+        players.second = std::move(player);
     }
 }
 
@@ -114,10 +111,10 @@ void TicTacToeGame::createBoard(int size) {
 void TicTacToeGame::endTurn() {
     this->turn += 1;
 
-    if (currentPlayer->getPlayerNum() == players.first->getPlayerNum()) {
-        currentPlayer = players.second;
+    if (currentLetter == players.first->getLetter()) {
+        currentLetter = players.second.get()->getLetter();
     } else {
-        currentPlayer = players.first;
+        currentLetter = players.first.get()->getLetter();
     }
 }
 
@@ -130,8 +127,8 @@ int TicTacToeGame::getBoardSize() {
     return size;
 }
 
-IPlayer* TicTacToeGame::getCurrentPlayer() {
-    return currentPlayer;
+char TicTacToeGame::getCurrentLetter() {
+    return currentLetter;
 }
 
 int TicTacToeGame::getTurn() {
@@ -142,14 +139,11 @@ std::vector<std::vector<char>> TicTacToeGame::getBoard() {
     return board;
 }
 
-std::pair<IPlayer*, IPlayer*> TicTacToeGame::getPlayers() {
-    return players;
-}
-
 void TicTacToeGame::setBoard(std::vector<std::vector<char>> board) {
     this->board = board;
 }
 
-void TicTacToeGame::setPlayers(std::pair<IPlayer*, IPlayer*> i_players) {
-    this->players = players;
+void TicTacToeGame::setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_Players) {
+    players.first = std::move(i_Players.first);
+    players.second = std::move(i_Players.second);
 }
