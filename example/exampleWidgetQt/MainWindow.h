@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <TicTacToeGame.h>
+#include "TicTacToeGame.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
