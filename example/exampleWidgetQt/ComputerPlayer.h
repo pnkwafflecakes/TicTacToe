@@ -79,6 +79,7 @@ class ComputerPlayer : public IPlayer {
          * @return Return the type of player
         */
         std::string getType();
+
  private:
     std::string difficulty;
 };
