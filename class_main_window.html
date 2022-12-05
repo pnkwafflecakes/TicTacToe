@@ -102,8 +102,8 @@ Inheritance diagram for MainWindow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0338491220763c77015c335c4ad23f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac0338491220763c77015c335c4ad23f8">MainWindow</a> (<a class="el" href="class_tic_tac_toe_game.html">TicTacToeGame</a> *<a class="el" href="class_main_window.html#a5e4a4b8e9c5528797a7e40058e30295d">game</a>, QWidget *parent=nullptr)</td></tr>
-<tr class="separator:ac0338491220763c77015c335c4ad23f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a607597969cd6161fd10fe8af048b8ab8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a607597969cd6161fd10fe8af048b8ab8">gameOver</a> ()</td></tr>
@@ -140,12 +140,16 @@ Private Slots</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a35466a70ed47252a0191168126a352a5"><td class="memItemLeft" align="right" valign="top">Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a></td></tr>
 <tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4a4b8e9c5528797a7e40058e30295d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tic_tac_toe_game.html">TicTacToeGame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a5e4a4b8e9c5528797a7e40058e30295d">game</a></td></tr>
-<tr class="separator:a5e4a4b8e9c5528797a7e40058e30295d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c69134f7d32d2e70fb937df4f03f54"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_tic_tac_toe_game.html">TicTacToeGame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a76c69134f7d32d2e70fb937df4f03f54">game</a></td></tr>
+<tr class="separator:a76c69134f7d32d2e70fb937df4f03f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599c4b94fae917e2646c6080b5d49b35"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a599c4b94fae917e2646c6080b5d49b35">player1</a></td></tr>
+<tr class="separator:a599c4b94fae917e2646c6080b5d49b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d5ce800f3af01d2a8e206b11ea9cee"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a17d5ce800f3af01d2a8e206b11ea9cee">player2</a></td></tr>
+<tr class="separator:a17d5ce800f3af01d2a8e206b11ea9cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac0338491220763c77015c335c4ad23f8" name="ac0338491220763c77015c335c4ad23f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0338491220763c77015c335c4ad23f8">&#9670;&nbsp;</a></span>MainWindow()</h2>
+<a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&nbsp;</a></span>MainWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,19 +160,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">MainWindow::MainWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_tic_tac_toe_game.html">TicTacToeGame</a> *&#160;</td>
-          <td class="paramname"><em>game</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -492,8 +486,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5e4a4b8e9c5528797a7e40058e30295d" name="a5e4a4b8e9c5528797a7e40058e30295d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e4a4b8e9c5528797a7e40058e30295d">&#9670;&nbsp;</a></span>game</h2>
+<a id="a76c69134f7d32d2e70fb937df4f03f54" name="a76c69134f7d32d2e70fb937df4f03f54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c69134f7d32d2e70fb937df4f03f54">&#9670;&nbsp;</a></span>game</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +496,51 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_tic_tac_toe_game.html">TicTacToeGame</a>* MainWindow::game</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_tic_tac_toe_game.html">TicTacToeGame</a>&gt; MainWindow::game</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a599c4b94fae917e2646c6080b5d49b35" name="a599c4b94fae917e2646c6080b5d49b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599c4b94fae917e2646c6080b5d49b35">&#9670;&nbsp;</a></span>player1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_i_player.html">IPlayer</a>&gt; MainWindow::player1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17d5ce800f3af01d2a8e206b11ea9cee" name="a17d5ce800f3af01d2a8e206b11ea9cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d5ce800f3af01d2a8e206b11ea9cee">&#9670;&nbsp;</a></span>player2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_i_player.html">IPlayer</a>&gt; MainWindow::player2</td>
         </tr>
       </table>
   </td>
@@ -546,7 +584,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_main_window.html">MainWindow</a></li>
-    <li class="footer">Generated on Mon Dec 5 2022 20:19:10 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Mon Dec 5 2022 21:24:46 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
