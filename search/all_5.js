@@ -1,16 +1,16 @@
 var searchData=
 [
-  ['game_0',['game',['../class_main_window.html#a5e4a4b8e9c5528797a7e40058e30295d',1,'MainWindow::game()'],['../class_game_tests.html#af9bb0b8d5a5613c86c4764eac809fe0b',1,'GameTests::game()']]],
+  ['game_0',['game',['../class_main_window.html#a5e4a4b8e9c5528797a7e40058e30295d',1,'MainWindow::game()'],['../class_computer_player_tests.html#a1cc18b68534cd19b077fab99bd14f436',1,'ComputerPlayerTests::game()']]],
   ['gameover_1',['gameOver',['../class_main_window.html#a607597969cd6161fd10fe8af048b8ab8',1,'MainWindow']]],
-  ['gametests_2',['GameTests',['../class_game_tests.html',1,'']]],
-  ['generatemove_3',['generateMove',['../class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c',1,'ComputerPlayer']]],
-  ['getboard_4',['getBoard',['../class_i_board_game.html#a786083ef5abdae822039d245a8ea42cf',1,'IBoardGame::getBoard()'],['../class_tic_tac_toe_game.html#a96c22de7dcb91e78f97e7b6fc1d387fb',1,'TicTacToeGame::getBoard()']]],
-  ['getboardsize_5',['getBoardSize',['../class_i_board_game.html#a3fe96adb3e74563d0fe344ec913090f1',1,'IBoardGame::getBoardSize()'],['../class_tic_tac_toe_game.html#a1d991c7778ac00353cf0e7d1055281cb',1,'TicTacToeGame::getBoardSize()']]],
-  ['getcurrentplayer_6',['getCurrentPlayer',['../class_i_board_game.html#ab6470268c414793823ff88ccc79bd751',1,'IBoardGame::getCurrentPlayer()'],['../class_tic_tac_toe_game.html#a75e4df42fb0b0e1dace9d60cd4e9fd05',1,'TicTacToeGame::getCurrentPlayer()']]],
+  ['generatemove_2',['generateMove',['../class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c',1,'ComputerPlayer']]],
+  ['getboard_3',['getBoard',['../class_i_board_game.html#a786083ef5abdae822039d245a8ea42cf',1,'IBoardGame::getBoard()'],['../class_mock_tic_tac_toe_game.html#aaffc5c3d034dbcb6a08c15fe40af6e9b',1,'MockTicTacToeGame::getBoard()'],['../class_tic_tac_toe_game.html#a96c22de7dcb91e78f97e7b6fc1d387fb',1,'TicTacToeGame::getBoard()']]],
+  ['getboardsize_4',['getBoardSize',['../class_i_board_game.html#a3fe96adb3e74563d0fe344ec913090f1',1,'IBoardGame::getBoardSize()'],['../class_mock_tic_tac_toe_game.html#a8bde84c2786fe643db5d425b515cfd2a',1,'MockTicTacToeGame::getBoardSize()'],['../class_tic_tac_toe_game.html#a1d991c7778ac00353cf0e7d1055281cb',1,'TicTacToeGame::getBoardSize()']]],
+  ['getcurrentplayer_5',['getCurrentPlayer',['../class_i_board_game.html#ab6470268c414793823ff88ccc79bd751',1,'IBoardGame::getCurrentPlayer()'],['../class_tic_tac_toe_game.html#a75e4df42fb0b0e1dace9d60cd4e9fd05',1,'TicTacToeGame::getCurrentPlayer()']]],
+  ['getcurrentplayernum_6',['getCurrentPlayerNum',['../class_mock_tic_tac_toe_game.html#abe59d90909249d826a538befed2a3e7d',1,'MockTicTacToeGame']]],
   ['getdifficulty_7',['getDifficulty',['../class_computer_player.html#a1901742283a477ba1974f715ec6c166a',1,'ComputerPlayer']]],
   ['getletter_8',['getLetter',['../class_computer_player.html#acfdb015e08f09f3a247a34001eaeaefe',1,'ComputerPlayer::getLetter()'],['../class_i_player.html#af040e987b7deae68af0e2badc2d2f52f',1,'IPlayer::getLetter()'],['../class_human_player.html#a6a2fdfd19a0bf48214de9ed72b5f836a',1,'HumanPlayer::getLetter()']]],
   ['getplayernum_9',['getPlayerNum',['../class_computer_player.html#a5d8f726280a8d25a03807801fdf37987',1,'ComputerPlayer::getPlayerNum()'],['../class_human_player.html#a1f4e5c5ce24c39e7b723f5a2f8d463f9',1,'HumanPlayer::getPlayerNum()'],['../class_i_player.html#a99eeab1f4732f25598ab1f7d7033450f',1,'IPlayer::getPlayerNum()']]],
-  ['getplayers_10',['getPlayers',['../class_i_board_game.html#a1cdf0ab5be16c23ddbfa200c5972b95e',1,'IBoardGame::getPlayers()'],['../class_tic_tac_toe_game.html#a428bfd3514f86e4917c13371a1ef6455',1,'TicTacToeGame::getPlayers()']]],
-  ['getturn_11',['getTurn',['../class_i_board_game.html#a4a5e9322c7a53ab53b6e1418ceb0d9c1',1,'IBoardGame::getTurn()'],['../class_tic_tac_toe_game.html#af49429b6dc3eebaa6818d7711159c87f',1,'TicTacToeGame::getTurn()']]],
+  ['getplayers_10',['getPlayers',['../class_i_board_game.html#a1cdf0ab5be16c23ddbfa200c5972b95e',1,'IBoardGame::getPlayers()'],['../class_mock_tic_tac_toe_game.html#ab8c03c72a6f4fa5bafb8ad8682283131',1,'MockTicTacToeGame::getPlayers()'],['../class_tic_tac_toe_game.html#a428bfd3514f86e4917c13371a1ef6455',1,'TicTacToeGame::getPlayers()']]],
+  ['getturn_11',['getTurn',['../class_i_board_game.html#a4a5e9322c7a53ab53b6e1418ceb0d9c1',1,'IBoardGame::getTurn()'],['../class_mock_tic_tac_toe_game.html#ab93b15685842d3e4f4d77c668f94fb19',1,'MockTicTacToeGame::getTurn()'],['../class_tic_tac_toe_game.html#af49429b6dc3eebaa6818d7711159c87f',1,'TicTacToeGame::getTurn()']]],
   ['gettype_12',['getType',['../class_computer_player.html#a3d74072b7f737ac81f6008d75a7b41f8',1,'ComputerPlayer::getType()'],['../class_human_player.html#a6dbb87833700e5afda24d30c103c84f6',1,'HumanPlayer::getType()'],['../class_i_player.html#a688915dac94db46a98f3f5f292816897',1,'IPlayer::getType()']]]
 ];
