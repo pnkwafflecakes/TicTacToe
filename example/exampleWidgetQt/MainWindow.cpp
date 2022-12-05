@@ -1,6 +1,6 @@
 #include "MainWindow.h"
 #include "./ui_MainWindow.h"
-#include "./include/TicTacToeGame.h"
+#include "TicTacToeGame.h"
 
 #include <iostream>
 
