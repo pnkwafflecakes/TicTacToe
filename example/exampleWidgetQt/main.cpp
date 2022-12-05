@@ -1,5 +1,5 @@
 #include "MainWindow.h"
-#include "./include/TicTacToeGame.h"
+#include "TicTacToeGame.h"
 #include <QApplication>
 
 
