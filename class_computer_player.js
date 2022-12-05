@@ -3,7 +3,7 @@ var class_computer_player =
     [ "ComputerPlayer", "class_computer_player.html#a9e42fe14e5551fafa4de5b80182ad8dd", null ],
     [ "ComputerPlayer", "class_computer_player.html#aef4695dfc6a32d1c8b44b1e944706a27", null ],
     [ "~ComputerPlayer", "class_computer_player.html#a20f26361bbb66b292e7f0792292e4250", null ],
-    [ "clickTile", "class_computer_player.html#a9015c3894acfcf060762b366c3ea8243", null ],
+    [ "clickTile", "class_computer_player.html#ac8dee8c5b2b6f03e86a79a6420a5e09b", null ],
     [ "generateMove", "class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c", null ],
     [ "getDifficulty", "class_computer_player.html#a1901742283a477ba1974f715ec6c166a", null ],
     [ "getLetter", "class_computer_player.html#acfdb015e08f09f3a247a34001eaeaefe", null ],

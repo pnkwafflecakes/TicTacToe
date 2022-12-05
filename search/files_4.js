@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['playerfactory_2ecpp_0',['PlayerFactory.cpp',['../_player_factory_8cpp.html',1,'']]],
-  ['playerfactory_2eh_1',['PlayerFactory.h',['../_player_factory_8h.html',1,'']]]
+  ['tictactoegame_2ecpp_0',['TicTacToeGame.cpp',['../_tic_tac_toe_game_8cpp.html',1,'']]],
+  ['tictactoegame_2eh_1',['TicTacToeGame.h',['../_tic_tac_toe_game_8h.html',1,'']]]
 ];
