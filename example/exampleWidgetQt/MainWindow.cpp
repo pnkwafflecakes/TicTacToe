@@ -1,7 +1,6 @@
 #include "MainWindow.h"
 #include "./ui_MainWindow.h"
 #include "TicTacToeGame.h"
-
 #include <iostream>
 
 MainWindow::MainWindow(TicTacToeGame* i_game, QWidget *parent)
