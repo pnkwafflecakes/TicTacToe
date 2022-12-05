@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "TicTacToeGame.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -12,7 +13,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(TicTacToeGame* game, QWidget* parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -28,5 +29,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    TicTacToeGame* game;
 };
 #endif // MAINWINDOW_H

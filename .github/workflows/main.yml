@@ -1,5 +1,5 @@
 
-name: hello_world App Compiles (ubuntu-latest gcc)
+name: App Compiles
 on:
   pull_request:
   push:
