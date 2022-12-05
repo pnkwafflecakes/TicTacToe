@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_0',['MainWindow',['../class_main_window.html',1,'']]]
+  ['tictactoegame_0',['TicTacToeGame',['../class_tic_tac_toe_game.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['humanplayer_0',['HumanPlayer',['../class_human_player.html',1,'']]]
+  ['iboardgame_0',['IBoardGame',['../class_i_board_game.html',1,'']]],
+  ['iplayer_1',['IPlayer',['../class_i_player.html',1,'']]]
 ];
