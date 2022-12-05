@@ -21,7 +21,7 @@ TicTacToeGame::~TicTacToeGame() {
 }
 
 TicTacToeGame::TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players) {
-    turn = 0;
+    turn = 1;
     players = i_players;
     currentPlayer = i_players.first;
     createBoard(3);
@@ -30,7 +30,7 @@ TicTacToeGame::TicTacToeGame(std::pair<IPlayer*, IPlayer*> i_players) {
 
 
 TicTacToeGame::TicTacToeGame(int size, std::pair<IPlayer*, IPlayer*> i_players) {
-    turn = 0;
+    turn = 1;
     players = i_players;
     currentPlayer = players.first;
     createBoard(size);
@@ -152,4 +152,5 @@ void TicTacToeGame::setBoard(std::vector<std::vector<char>> board) {
 
 void TicTacToeGame::setPlayers(std::pair<IPlayer*, IPlayer*> i_players) {
     this->players = players;
+    currentPlayer = players.first;
 }

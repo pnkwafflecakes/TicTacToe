@@ -2,15 +2,18 @@
 #include "./ui_MainWindow.h"
 #include "./include/TicTacToeGame.h"
 #include "./include/HumanPlayer.h"
+#include "./include/ComputerPlayer.h"
 #include <QMessageBox>
+#include <QTimer>
 #include <iostream>
 
-MainWindow::MainWindow(TicTacToeGame* i_game, QWidget *parent)
+MainWindow::MainWindow(TicTacToeGame * i_game, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     game = i_game;
+    QTimer::singleShot(0, this, SLOT(gameTypePopUp()));
 }
 
 MainWindow::~MainWindow()
@@ -22,6 +25,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_button1_clicked()
 {
+    int num = game->getBoardSize();
     char letter = game->getCurrentPlayer()->getLetter();
     
     if (game->modifyTile(0, 0, letter) == true) {
@@ -154,6 +158,7 @@ void MainWindow::endGame() {
                 tr("TicTacToe"),
                 tr("Player-X Wins!"));
             newGamePopUp();
+            //add delete game callmethod
         }
         else if (game->checkEnd() == 1) {
             QMessageBox::information(
@@ -161,25 +166,62 @@ void MainWindow::endGame() {
                 tr("TicTacToe"),
                 tr("Player-O Wins!"));
             newGamePopUp();
+            //add delete game callmethod
         }
         else if (game->checkEnd() == 0) {
             QMessageBox::information(
                 this,
                 tr("TicTacToe"),
                 tr("Draw!"));
+            //add delete game callmethod
             newGamePopUp();
         }
     }
 }
 
+void MainWindow::gameTypePopUp() {
+    switch (QMessageBox::question(
+        this,
+        tr("TicTacToe"),
+        tr("Singleplayer?"),
+
+        QMessageBox::Yes |
+        QMessageBox::No))
+    {
+    case QMessageBox::Yes:
+        singleplayer = true;
+        newGame();
+        qDebug("yes");
+        break;
+    case QMessageBox::No:
+        singleplayer = false;
+        newGame();
+        qDebug("no");
+        break;
+    default:
+        qDebug("default");
+        break;
+    }
+}
+
 void MainWindow::newGame() {
-    std::pair<IPlayer*, IPlayer*> players = game->getPlayers();
-    HumanPlayer* player1 = new HumanPlayer(players.first->getLetter(), players.first->getPlayerNum());
-    HumanPlayer* player2 = new HumanPlayer(players.second->getLetter(), players.second->getPlayerNum());
-    delete game;
-    game = new TicTacToeGame();
-    game->assignPlayer(player1);
-    game->assignPlayer(player2);
+    if (singleplayer == true) {
+        std::pair<IPlayer*, IPlayer*> players = game->getPlayers();
+        HumanPlayer* player1 = new HumanPlayer(players.first->getLetter(), players.first->getPlayerNum());
+        HumanPlayer* player2 = new HumanPlayer(players.second->getLetter(), players.second->getPlayerNum());
+        game = new TicTacToeGame();
+        game->assignPlayer(player1);
+        game->assignPlayer(player2);
+    }
+
+    else if (singleplayer = false) {
+        std::pair<IPlayer*, IPlayer*> players =
+        std::pair(new HumanPlayer('X', 1), new HumanPlayer('O', 2));
+        game->createBoard(3);
+        game->setPlayers(players);
+        char let = game->getCurrentPlayer()->getLetter();
+    }
+    
     
     ui->button1->setText("");
     ui->button2->setText("");
@@ -206,11 +248,11 @@ void MainWindow::newGamePopUp() {
         qDebug("yes");
         break;
     case QMessageBox::No:
-        this->close();
+        newGame();
         qDebug("no");
         break;
     default:
-        this->close();
+        qDebug("default");
         break;
     }
 }

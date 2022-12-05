@@ -2,15 +2,12 @@
 #include "./include/TicTacToeGame.h"
 #include "include/HumanPlayer.h"
 #include <QApplication>
+#include <QMessageBox>
 
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     TicTacToeGame* game = new TicTacToeGame();
-    HumanPlayer* player1 = new HumanPlayer('X', 1);
-    HumanPlayer* player2 = new HumanPlayer('O', 2);
-    game->assignPlayer(player1);
-    game->assignPlayer(player2);
     QApplication a(argc, argv);
     MainWindow w(game);
     w.show();

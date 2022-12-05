@@ -13,7 +13,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(TicTacToeGame* game, QWidget* parent = nullptr);
+    //MainWindow(QWidget* parent = nullptr);
+    MainWindow(TicTacToeGame * i_game, QWidget* parent = nullptr);
     ~MainWindow();
     bool gameOver();
     void endGame();
@@ -30,9 +31,11 @@ private slots:
     void on_button7_clicked();
     void on_button8_clicked();
     void on_button9_clicked();
+    void gameTypePopUp();
 
 private:
     Ui::MainWindow *ui;
     TicTacToeGame* game;
+    bool singleplayer;
 };
 #endif // MAINWINDOW_H
