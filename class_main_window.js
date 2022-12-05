@@ -1,6 +1,6 @@
 var class_main_window =
 [
-    [ "MainWindow", "class_main_window.html#ac0338491220763c77015c335c4ad23f8", null ],
+    [ "MainWindow", "class_main_window.html#a996c5a2b6f77944776856f08ec30858d", null ],
     [ "~MainWindow", "class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7", null ],
     [ "endGame", "class_main_window.html#a37d293e7856b1ce69164db1422057700", null ],
     [ "gameOver", "class_main_window.html#a607597969cd6161fd10fe8af048b8ab8", null ],
@@ -15,6 +15,8 @@ var class_main_window =
     [ "on_button7_clicked", "class_main_window.html#a56746f12f47752e1a042726fb6dcc62b", null ],
     [ "on_button8_clicked", "class_main_window.html#a8d62ea3c9b5332d6b9065bf267a35bfb", null ],
     [ "on_button9_clicked", "class_main_window.html#a481780b28037bd6649a16c92b05efc6b", null ],
-    [ "game", "class_main_window.html#a5e4a4b8e9c5528797a7e40058e30295d", null ],
+    [ "game", "class_main_window.html#a76c69134f7d32d2e70fb937df4f03f54", null ],
+    [ "player1", "class_main_window.html#a599c4b94fae917e2646c6080b5d49b35", null ],
+    [ "player2", "class_main_window.html#a17d5ce800f3af01d2a8e206b11ea9cee", null ],
     [ "ui", "class_main_window.html#a35466a70ed47252a0191168126a352a5", null ]
 ];
