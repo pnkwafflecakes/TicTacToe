@@ -15,6 +15,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(TicTacToeGame* game, QWidget* parent = nullptr);
     ~MainWindow();
+    bool gameOver();
+    void endGame();
+    void newGame();
+    void newGamePopUp();
 
 private slots:
     void on_button1_clicked();
