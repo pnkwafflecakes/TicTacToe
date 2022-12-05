@@ -1,3 +1,13 @@
+/**
+ * @file 
+ * @author 
+ * @brief 
+ * @version 
+ * @date 
+ * 
+ * @copyright Copyright (c) 2022
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
