@@ -18,15 +18,13 @@ HumanPlayer::HumanPlayer() {
 
 HumanPlayer::HumanPlayer(char iLetter, int playerNum) {
     if (iLetter == 'X' || iLetter == 'x' || iLetter == 'O' || iLetter == 'o') {
-        letter = (char)toupper(iLetter);
-    }
-    else {
+        letter = static_cast<char>toupper(iLetter);
+    } else {
         letter = 0;
         throw std::invalid_argument("Invalid letter");
     }
     this->playerNum = playerNum;
     this->type = "human";
-
 }
 
 void HumanPlayer::clickTile(int x, int y, IBoardGame* game) {
