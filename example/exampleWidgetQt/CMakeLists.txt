@@ -68,6 +68,15 @@ set_target_properties(hello_world PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+
+install(TARGETS hello_world
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_finalize_executable(hello_world)
+endif()
+
 enable_testing()
 
 add_executable(
@@ -88,11 +97,3 @@ target_link_libraries(
 include(GoogleTest)
 gtest_discover_tests(TicTacToeGameTests, HumanPlayerTests,
     ComputerPlayerTests)
-
-install(TARGETS hello_world
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
-
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(hello_world)
-endif()
