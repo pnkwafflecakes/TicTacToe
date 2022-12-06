@@ -23,7 +23,7 @@ class ComputerPlayer : public IPlayer {
          * @brief Constructor for ComputerPlayer using custom parameters
          * 
          * @param letter The letter to be assinged to this player 'X' or 'O'
-         * @param playerNum The number of this player 1 or 2
+         * @param playerNum The number of this player X or O
          * @param difficulty The factor that determines how hard the computer is to play against
         */
         ComputerPlayer(char letter, int playerNum,

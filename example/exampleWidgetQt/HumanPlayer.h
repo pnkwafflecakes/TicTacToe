@@ -32,7 +32,7 @@ class HumanPlayer : public IPlayer {
      * @brief Consturctor for HumanPlayer using custom parameters
      * 
      * @param letter The letter to be assinged to this player 'X' or 'O'
-     * @param playerNum The number of this player 1 or 2
+     * @param playerNum The number of this player X or X
     */
     HumanPlayer(char letter, int playerNum);
 

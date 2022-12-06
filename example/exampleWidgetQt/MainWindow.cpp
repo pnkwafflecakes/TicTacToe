@@ -16,6 +16,11 @@
 #include "TicTacToeGame.h"
 #include "HumanPlayer.h"
 
+/**
+ * @brief Implemented constructor for MainWindow
+ * 
+ * @param parent Widget for the main window
+*/
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow) {
@@ -27,11 +32,16 @@ MainWindow::MainWindow(QWidget *parent)
     game.get()->assignPlayer(std::move(player2));
 }
 
+/**
+ * @brief Implemented destructor for MainWindow
+*/
 MainWindow::~MainWindow() {
     delete ui;
 }
 
-
+/**
+ * @brief On button 1 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button1_clicked() {
     char letter = game->getCurrentLetter();
 
@@ -45,6 +55,9 @@ void MainWindow::on_button1_clicked() {
     }
 }
 
+/**
+ * @brief On button 2 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button2_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(0, 1, letter) == true) {
@@ -57,6 +70,9 @@ void MainWindow::on_button2_clicked() {
     }
 }
 
+/**
+ * @brief On button 3 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button3_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(0, 2, letter) == true) {
@@ -68,6 +84,10 @@ void MainWindow::on_button3_clicked() {
         }
     }
 }
+
+/**
+ * @brief On button 4 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button4_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(1, 0, letter) == true) {
@@ -80,6 +100,9 @@ void MainWindow::on_button4_clicked() {
     }
 }
 
+/**
+ * @brief On button 5 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button5_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(1, 1, letter) == true) {
@@ -92,6 +115,9 @@ void MainWindow::on_button5_clicked() {
     }
 }
 
+/**
+ * @brief On button 6 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button6_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(1, 2, letter) == true) {
@@ -104,6 +130,9 @@ void MainWindow::on_button6_clicked() {
     }
 }
 
+/**
+ * @brief On button 7 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button7_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(2, 0, letter) == true) {
@@ -116,6 +145,9 @@ void MainWindow::on_button7_clicked() {
     }
 }
 
+/**
+ * @brief On button 8 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button8_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(2, 1, letter) == true) {
@@ -128,6 +160,9 @@ void MainWindow::on_button8_clicked() {
     }
 }
 
+/**
+ * @brief On button 9 click attempt to modify tile and check if game is over
+*/
 void MainWindow::on_button9_clicked() {
     char letter = game->getCurrentLetter();
     if (game->modifyTile(2, 2, letter) == true) {
@@ -140,6 +175,11 @@ void MainWindow::on_button9_clicked() {
     }
 }
 
+/**
+ * @brief Check if the game is over
+ * 
+ * @return Return a ture or false value
+*/
 bool MainWindow::gameOver() {
     if (game->checkEnd() == -1) {
         return false;
@@ -148,6 +188,9 @@ bool MainWindow::gameOver() {
     }
 }
 
+/**
+ * @brief End the game
+*/
 void MainWindow::endGame() {
     if (gameOver()) {
         if (game->checkEnd() == 2) {
@@ -172,6 +215,9 @@ void MainWindow::endGame() {
     }
 }
 
+/**
+ * @brief Create a new game
+*/
 void MainWindow::newGame() {
     
     
@@ -192,6 +238,9 @@ void MainWindow::newGame() {
     ui->button9->setText("");
 }
 
+/**
+ * @brief Ask the players if they would like to play another game
+*/
 void MainWindow::newGamePopUp() {
     switch (QMessageBox::question(
         this,

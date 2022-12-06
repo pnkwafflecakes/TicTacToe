@@ -30,7 +30,7 @@ HumanPlayer::~HumanPlayer() {
  * @brief Implemented constructor for HumanPlayer using custom parameters
  * 
  * @param letter The letter to be assinged to this player 'X' or 'O'
- * @param playerNum The number of this player 1 or 2
+ * @param playerNum The number of this player X or O
  */ 
 HumanPlayer::HumanPlayer(char iLetter, int playerNum) {
     if (iLetter == 'X' || iLetter == 'x' || iLetter == 'O' || iLetter == 'o') {
