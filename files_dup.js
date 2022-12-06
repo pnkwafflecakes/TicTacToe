@@ -14,8 +14,6 @@ var files_dup =
     [ "IPlayer.h", "_i_player_8h.html", [
       [ "IPlayer", "class_i_player.html", "class_i_player" ]
     ] ],
-    [ "pch.cpp", "pch_8cpp.html", null ],
-    [ "pch.h", "pch_8h.html", null ],
     [ "TicTacToeGame.cpp", "_tic_tac_toe_game_8cpp.html", null ],
     [ "TicTacToeGame.h", "_tic_tac_toe_game_8h.html", [
       [ "TicTacToeGame", "class_tic_tac_toe_game.html", "class_tic_tac_toe_game" ]
