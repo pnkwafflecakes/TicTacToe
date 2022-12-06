@@ -85,7 +85,8 @@ class IBoardGame {
     */
     virtual int getTurn() = 0;
 
-    //virtual std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> getPlayers() = 0;
+    // virtual std::pair<std::unique_ptr<IPlayer>,
+    // std::unique_ptr<IPlayer>> getPlayers() = 0;
 
     /**
      * @brief Used to set the board
@@ -99,5 +100,6 @@ class IBoardGame {
      * 
      * @param i_players The players we have
     */
-    virtual void setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) = 0;
+    virtual void setPlayers(std::pair<std::unique_ptr<IPlayer>,
+        std::unique_ptr<IPlayer>> i_players) = 0;
 };

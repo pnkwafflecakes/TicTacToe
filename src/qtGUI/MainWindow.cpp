@@ -219,8 +219,6 @@ void MainWindow::endGame() {
  * @brief Create a new game
 */
 void MainWindow::newGame() {
-    
-    
     game.reset(new TicTacToeGame());
     player1.reset(new HumanPlayer('X', 1));
     player2.reset(new HumanPlayer('O', 2));

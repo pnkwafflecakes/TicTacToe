@@ -11,6 +11,7 @@
 
 #include "HumanPlayer.h"
 #include <stdexcept>
+#include <memory>
 
 /**
  * @brief Implemented default constructor for HumanPlayer
@@ -22,9 +23,7 @@ HumanPlayer::HumanPlayer() {
 /**
  * @brief Implemented destructor
 */
-HumanPlayer::~HumanPlayer() {
-
-}
+HumanPlayer::~HumanPlayer() {}
 
 /**
  * @brief Implemented constructor for HumanPlayer using custom parameters

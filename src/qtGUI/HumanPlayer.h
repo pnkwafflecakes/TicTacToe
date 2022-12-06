@@ -12,6 +12,7 @@
 #include "IPlayer.h"
 #include "IBoardGame.h"
 #include <string>
+#include <memory>
 
 /**
  * @details Class for HumanPlayer object

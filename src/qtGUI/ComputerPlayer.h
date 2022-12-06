@@ -13,6 +13,7 @@
 #include "IBoardGame.h"
 #include <string>
 #include <utility>
+#include <memory>
 
 /**
  * @details Class for ComputerPlayer object
