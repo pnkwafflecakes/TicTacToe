@@ -12,7 +12,9 @@
 #include "IPlayer.h"
 #include <stdexcept>
 
-
+/**
+ * @brief Default constructor for TicTacToeGame
+*/
 TicTacToeGame::TicTacToeGame() {
     turn = 1;
     players.first = nullptr;
@@ -21,10 +23,18 @@ TicTacToeGame::TicTacToeGame() {
     currentLetter = 'N';
 }
 
+/**
+ * @brief Destructor for TicTacToeGame
+*/
 TicTacToeGame::~TicTacToeGame() {
     
 }
 
+/**
+ * @brief Constructor with players param
+ * 
+ * @param i_players The players we have
+*/
 TicTacToeGame::TicTacToeGame(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) {
     turn = 0;
     players.first = std::move(i_players.first);
@@ -33,6 +43,12 @@ TicTacToeGame::TicTacToeGame(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr
     createBoard(3);
 }
 
+/**
+ * @brief Constructor with player and size param
+ * 
+ * @param size The size of the board
+ * @param i_players The players we have
+*/
 TicTacToeGame::TicTacToeGame(int size,
                             std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) {
     turn = 0;
@@ -42,6 +58,11 @@ TicTacToeGame::TicTacToeGame(int size,
     createBoard(size);
 }
 
+/**
+ * @brief Assign players
+ * 
+ * @param player The player to assign
+*/
 void TicTacToeGame::assignPlayer(std::unique_ptr<IPlayer> player) {
     if (player == nullptr) {
         throw std::invalid_argument("Null player!");
@@ -53,6 +74,13 @@ void TicTacToeGame::assignPlayer(std::unique_ptr<IPlayer> player) {
     }
 }
 
+/**
+ * @brief Modify a tile with given coordinates and letter
+ * 
+ * @param x The x position on the board
+ * @param y The y position on the board
+ * @param letter The letter of the current player 
+*/
 bool TicTacToeGame::modifyTile(int x, int y, char letter) {
     if (letter != 'X' && letter != 'O' && letter != 'N') {
         throw std::invalid_argument("Invalid character.");
@@ -68,6 +96,11 @@ bool TicTacToeGame::modifyTile(int x, int y, char letter) {
     }
 }
 
+/**
+ * @brief Check if the game is over
+ * 
+ * @return Return a check code
+*/
 int TicTacToeGame::checkEnd() {
     // check diagonals
     if ((board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O')
@@ -98,6 +131,11 @@ int TicTacToeGame::checkEnd() {
     return -1;
 }
 
+/**
+ * @brief Create a board given a size
+ * 
+ * @param size The size of the board
+*/
 void TicTacToeGame::createBoard(int size) {
     if (size != 3) {
         throw std::invalid_argument("Invalid size.");
@@ -108,6 +146,9 @@ void TicTacToeGame::createBoard(int size) {
     this->board = board;
 }
 
+/**
+ * @brief End the current players turn
+*/
 void TicTacToeGame::endTurn() {
     this->turn += 1;
 
@@ -118,6 +159,11 @@ void TicTacToeGame::endTurn() {
     }
 }
 
+/**
+ * @brief Get the board size
+ * 
+ * @return Return the size of the board
+*/
 int TicTacToeGame::getBoardSize() {
     int size = 0;
 
@@ -127,22 +173,47 @@ int TicTacToeGame::getBoardSize() {
     return size;
 }
 
+/**
+ * @brief Get the current letter of the player
+ * 
+ * @return Return the current letter of the player
+*/
 char TicTacToeGame::getCurrentLetter() {
     return currentLetter;
 }
 
+/**
+ * @brief Get the turn
+ * 
+ * @return Return the turn
+*/
 int TicTacToeGame::getTurn() {
     return turn;
 }
 
+/**
+ * @brief Get the current board
+ * 
+ * @return Return the board as a vector
+*/
 std::vector<std::vector<char>> TicTacToeGame::getBoard() {
     return board;
 }
 
+/**
+ * @brief Set the board to a given board
+ * 
+ * @param board The board which will replace the board
+*/
 void TicTacToeGame::setBoard(std::vector<std::vector<char>> board) {
     this->board = board;
 }
 
+/**
+ * @brief Set the players to given players
+ * 
+ * @param i_player The players we have
+*/
 void TicTacToeGame::setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_Players) {
     players.first = std::move(i_Players.first);
     players.second = std::move(i_Players.second);
