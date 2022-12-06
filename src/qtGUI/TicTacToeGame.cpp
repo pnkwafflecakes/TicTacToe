@@ -11,6 +11,7 @@
 #include "TicTacToeGame.h"
 #include "IPlayer.h"
 #include <stdexcept>
+#include <memory>
 
 /**
  * @brief Default constructor for TicTacToeGame
@@ -26,16 +27,15 @@ TicTacToeGame::TicTacToeGame() {
 /**
  * @brief Destructor for TicTacToeGame
 */
-TicTacToeGame::~TicTacToeGame() {
-    
-}
+TicTacToeGame::~TicTacToeGame() {}
 
 /**
  * @brief Constructor with players param
  * 
  * @param i_players The players we have
 */
-TicTacToeGame::TicTacToeGame(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) {
+TicTacToeGame::TicTacToeGame(std::pair<std::unique_ptr<IPlayer>,
+    std::unique_ptr<IPlayer>> i_players) {
     turn = 0;
     players.first = std::move(i_players.first);
     players.second = std::move(i_players.second);
@@ -49,8 +49,8 @@ TicTacToeGame::TicTacToeGame(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr
  * @param size The size of the board
  * @param i_players The players we have
 */
-TicTacToeGame::TicTacToeGame(int size,
-                            std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players) {
+TicTacToeGame::TicTacToeGame(int size, std::pair<std::unique_ptr<IPlayer>,
+    std::unique_ptr<IPlayer>> i_players) {
     turn = 0;
     players.first.reset(i_players.first.get());
     players.second = std::move(i_players.second);

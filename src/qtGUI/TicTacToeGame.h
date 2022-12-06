@@ -12,6 +12,7 @@
 #include "IBoardGame.h"
 #include <vector>
 #include <utility>
+#include <memory>
 
 class TicTacToeGame : private IBoardGame {
  public:
@@ -38,7 +39,8 @@ class TicTacToeGame : private IBoardGame {
      * @param size The size of the board
      * @param i_players The players we have
     */
-    TicTacToeGame(int size, std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_players);
+    TicTacToeGame(int size, std::pair<std::unique_ptr<IPlayer>,
+        std::unique_ptr<IPlayer>> i_players);
 
     /**
      * @brief Assign players
@@ -103,7 +105,8 @@ class TicTacToeGame : private IBoardGame {
     */
     int getTurn();
 
-    //std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> getPlayers();
+    // std::pair<std::unique_ptr<IPlayer>,
+    // std::unique_ptr<IPlayer>> getPlayers();
 
     /**
      * @brief Set the board to a given board
@@ -117,5 +120,6 @@ class TicTacToeGame : private IBoardGame {
      * 
      * @param i_player The players we have
     */
-    void setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_player);
+    void setPlayers(std::pair<std::unique_ptr<IPlayer>,
+        std::unique_ptr<IPlayer>> i_player);
 };

@@ -8,8 +8,8 @@
  * @copyright Copyright (c) 2022
  */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef SRC_QTGUI_MAINWINDOW_H
+#define SRC_QTGUI_MAINWINDOW_H
 
 #include <QMainWindow>
 #include "TicTacToeGame.h"
@@ -60,50 +60,50 @@ class MainWindow : public QMainWindow {
     void newGamePopUp();
 
  private slots:
-   /**
-    * @brief Action when button 1 is clicked
-   */
-   void on_button1_clicked();
-
-   /**
-    * @brief Action when button 2 is clicked
-   */
-   void on_button2_clicked();
-
-   /**
-    * @brief Action when button 3 is clicked
-   */
-   void on_button3_clicked();
+    /**
+     * @brief Action when button 1 is clicked
+    */
+    void on_button1_clicked();
+  
+    /**
+     * @brief Action when button 2 is clicked
+    */
+    void on_button2_clicked();
+  
+    /**
+     * @brief Action when button 3 is clicked
+    */
+    void on_button3_clicked();
+     
+    /**
+     * @brief Action when button 4 is clicked
+    */
+    void on_button4_clicked();
+     
+    /**
+     * @brief Action when button 5 is clicked
+    */
+    void on_button5_clicked();
+     
+    /**
+     * @brief Action when button 6 is clicked
+    */
+    void on_button6_clicked();
     
-   /**
-    * @brief Action when button 4 is clicked
-   */
-   void on_button4_clicked();
+    /**
+     * @brief Action when button 7 is clicked
+    */
+    void on_button7_clicked();
     
-   /**
-    * @brief Action when button 5 is clicked
-   */
-   void on_button5_clicked();
+    /**
+     * @brief Action when button 8 is clicked
+    */
+    void on_button8_clicked();
     
-   /**
-    * @brief Action when button 6 is clicked
-   */
-   void on_button6_clicked();
-   
-   /**
-    * @brief Action when button 7 is clicked
-   */
-   void on_button7_clicked();
-   
-   /**
-    * @brief Action when button 8 is clicked
-   */
-   void on_button8_clicked();
-   
-   /**
-    * @brief Action when button 9 is clicked
-   */
-   void on_button9_clicked();
+    /**
+     * @brief Action when button 9 is clicked
+    */
+    void on_button9_clicked();
 
  private:
     Ui::MainWindow *ui;
@@ -111,4 +111,4 @@ class MainWindow : public QMainWindow {
     std::unique_ptr<IPlayer> player1;
     std::unique_ptr<IPlayer> player2;
 };
-#endif  // MAINWINDOW_H
+#endif  // SRC_QTGUI_MAINWINDOW_H
