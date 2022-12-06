@@ -31,7 +31,7 @@ class TicTacToeGame : private IBoardGame {
      * 
      * @param i_players The players we have
     */
-    excplicit TicTacToeGame(std::pair<std::unique_ptr<IPlayer>,
+    explicit TicTacToeGame(std::pair<std::unique_ptr<IPlayer>,
         std::unique_ptr<IPlayer>> i_players);
 
     /**
