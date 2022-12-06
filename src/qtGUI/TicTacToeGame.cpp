@@ -214,7 +214,8 @@ void TicTacToeGame::setBoard(std::vector<std::vector<char>> board) {
  * 
  * @param i_player The players we have
 */
-void TicTacToeGame::setPlayers(std::pair<std::unique_ptr<IPlayer>, std::unique_ptr<IPlayer>> i_Players) {
+void TicTacToeGame::setPlayers(std::pair<std::unique_ptr<IPlayer>,
+    std::unique_ptr<IPlayer>> i_Players) {
     players.first = std::move(i_Players.first);
     players.second = std::move(i_Players.second);
 }
