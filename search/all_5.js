@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['game_0',['game',['../class_main_window.html#a5e4a4b8e9c5528797a7e40058e30295d',1,'MainWindow']]],
-  ['gameover_1',['gameOver',['../class_main_window.html#a607597969cd6161fd10fe8af048b8ab8',1,'MainWindow']]],
+  ['game_0',['game',['../class_game_tests.html#af9bb0b8d5a5613c86c4764eac809fe0b',1,'GameTests']]],
+  ['gametests_1',['GameTests',['../class_game_tests.html',1,'']]],
   ['generatemove_2',['generateMove',['../class_computer_player.html#a1f81f1c6b80e5e1775ba057a6e72861c',1,'ComputerPlayer']]],
   ['getboard_3',['getBoard',['../class_i_board_game.html#a786083ef5abdae822039d245a8ea42cf',1,'IBoardGame::getBoard()'],['../class_tic_tac_toe_game.html#a96c22de7dcb91e78f97e7b6fc1d387fb',1,'TicTacToeGame::getBoard()']]],
   ['getboardsize_4',['getBoardSize',['../class_i_board_game.html#a3fe96adb3e74563d0fe344ec913090f1',1,'IBoardGame::getBoardSize()'],['../class_tic_tac_toe_game.html#a1d991c7778ac00353cf0e7d1055281cb',1,'TicTacToeGame::getBoardSize()']]],
