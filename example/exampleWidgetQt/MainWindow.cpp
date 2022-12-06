@@ -15,6 +15,7 @@
 #include "./ui_MainWindow.h"
 #include "TicTacToeGame.h"
 #include "HumanPlayer.h"
+#include "ComputerPlayer.h"
 
 /**
  * @brief Implemented constructor for MainWindow
@@ -220,12 +221,20 @@ void MainWindow::endGame() {
 */
 void MainWindow::newGame() {
     
-    
-    game.reset(new TicTacToeGame());
-    player1.reset(new HumanPlayer('X', 1));
-    player2.reset(new HumanPlayer('O', 2));
-    game->assignPlayer(std::move(player1));
-    game->assignPlayer(std::move(player2));
+    if (!singleplayer) {
+        game.reset(new TicTacToeGame());
+        player1.reset(new HumanPlayer('X', 1));
+        player2.reset(new HumanPlayer('O', 2));
+        game->assignPlayer(std::move(player1));
+        game->assignPlayer(std::move(player2));
+    }
+    else if (singleplayer) {
+        game.reset(new TicTacToeGame());
+        player1.reset(new HumanPlayer('X', 1));
+        player2.reset(new ComputerPlayer('O', 2, "easy"));
+        game->assignPlayer(std::move(player1));
+        game->assignPlayer(std::move(player2));
+    }
 
     ui->button1->setText("");
     ui->button2->setText("");

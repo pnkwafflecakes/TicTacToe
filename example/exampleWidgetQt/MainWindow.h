@@ -110,5 +110,6 @@ class MainWindow : public QMainWindow {
     std::unique_ptr<TicTacToeGame> game;
     std::unique_ptr<IPlayer> player1;
     std::unique_ptr<IPlayer> player2;
+    bool singleplayer = false;
 };
 #endif  // MAINWINDOW_H
