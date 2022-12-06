@@ -13,7 +13,7 @@
 #include <vector>
 #include <utility>
 
-class TicTacToeGame : private IBoardGame {
+class TicTacToeGame : public IBoardGame {
  public:
     /**
      * @brief Default constructor for TicTacToeGame

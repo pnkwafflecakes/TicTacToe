@@ -10,6 +10,7 @@
 
 #include "MainWindow.h"
 #include <QMessageBox>
+#include <QTimer>
 #include <iostream>
 #include <utility>
 #include "./ui_MainWindow.h"
@@ -26,11 +27,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    game.reset(new TicTacToeGame());
-    player1.reset(new HumanPlayer('X', 1));
-    player2.reset(new HumanPlayer('O', 2));
-    game.get()->assignPlayer(std::move(player1));
-    game.get()->assignPlayer(std::move(player2));
+    QTimer::singleShot(0, this, SLOT(gameTypePopUp()));
+    newGame();
 }
 
 /**
@@ -53,6 +51,9 @@ void MainWindow::on_button1_clicked() {
         if (gameOver()) {
             endGame();
         }
+        else if (singleplayer) {
+            computerMove();
+        }
     }
 }
 
@@ -67,6 +68,9 @@ void MainWindow::on_button2_clicked() {
         game->endTurn();
         if (gameOver()) {
             endGame();
+        }
+        else if (singleplayer) {
+            computerMove();
         }
     }
 }
@@ -83,6 +87,9 @@ void MainWindow::on_button3_clicked() {
         if (gameOver()) {
             endGame();
         }
+        else if (singleplayer) {
+            computerMove();
+        }
     }
 }
 
@@ -97,6 +104,9 @@ void MainWindow::on_button4_clicked() {
         game->endTurn();
         if (gameOver()) {
             endGame();
+        }
+        else if (singleplayer) {
+            computerMove();
         }
     }
 }
@@ -113,6 +123,9 @@ void MainWindow::on_button5_clicked() {
         if (gameOver()) {
             endGame();
         }
+        else if (singleplayer) {
+            computerMove();
+        }
     }
 }
 
@@ -127,6 +140,9 @@ void MainWindow::on_button6_clicked() {
         game->endTurn();
         if (gameOver()) {
             endGame();
+        }
+        else if (singleplayer) {
+            computerMove();
         }
     }
 }
@@ -143,6 +159,9 @@ void MainWindow::on_button7_clicked() {
         if (gameOver()) {
             endGame();
         }
+        else if (singleplayer) {
+            computerMove();
+        }
     }
 }
 
@@ -157,6 +176,9 @@ void MainWindow::on_button8_clicked() {
         game->endTurn();
         if (gameOver()) {
             endGame();
+        }
+        else if (singleplayer) {
+            computerMove();
         }
     }
 }
@@ -173,9 +195,54 @@ void MainWindow::on_button9_clicked() {
         if (gameOver()) {
             endGame();
         }
+        else if (singleplayer) {
+            computerMove();
+        }
     }
 }
 
+void MainWindow::computerMove() {
+    if (singleplayer) {
+        
+        //sloppy solution ran out of time
+        ComputerPlayer computer = ComputerPlayer('O', 2, "easy");
+        std::pair<int, int> move = computer.clickTile(-1, -1, game);
+        const QString stringL(player2.get()->getLetter());
+        if (move.first == 0 && move.second == 0) {
+            ui->button1->setText(stringL);
+        }
+        //change correct button text
+        else if (move.first == 0 && move.second == 1) {
+            ui->button2->setText(stringL);
+        }
+        else if (move.first == 0 && move.second == 2) {
+            ui->button3->setText(stringL);
+        }
+        else if (move.first == 1 && move.second == 0) {
+            ui->button4->setText(stringL);
+        }
+        else if (move.first == 1 && move.second == 1) {
+            ui->button5->setText(stringL);
+        }
+        else if (move.first == 1 && move.second == 2) {
+            ui->button6->setText(stringL);
+        }
+        else if (move.first == 2 && move.second == 0) {
+            ui->button7->setText(stringL);
+        }
+        else if (move.first == 2 && move.second == 1) {
+            ui->button8->setText(stringL);
+        }
+        else if (move.first == 2 && move.second == 2) {
+            ui->button9->setText(stringL);
+        }
+
+        game.get()->endTurn();
+        if (gameOver()) {
+            endGame();
+        }
+    }
+}
 /**
  * @brief Check if the game is over
  * 
@@ -216,6 +283,31 @@ void MainWindow::endGame() {
     }
 }
 
+void MainWindow::gameTypePopUp() {
+    switch (QMessageBox::question(
+        this,
+        tr("TicTacToe"),
+        tr("Singleplayer?"),
+
+        QMessageBox::Yes |
+        QMessageBox::No))
+    {
+    case QMessageBox::Yes:
+        singleplayer = true;
+        newGame();
+        qDebug("yes");
+        break;
+    case QMessageBox::No:
+        singleplayer = false;
+        newGame();
+        qDebug("no");
+        break;
+    default:
+        qDebug("default");
+        break;
+    }
+}
+
 /**
  * @brief Create a new game
 */
@@ -231,9 +323,9 @@ void MainWindow::newGame() {
     else if (singleplayer) {
         game.reset(new TicTacToeGame());
         player1.reset(new HumanPlayer('X', 1));
-        player2.reset(new ComputerPlayer('O', 2, "easy"));
-        game->assignPlayer(std::move(player1));
-        game->assignPlayer(std::move(player2));
+        player2.reset(new HumanPlayer('O', 2));
+        std::pair<IPlayer, IPlayer> players(player1, player2);
+        game.get()->setPlayers();
     }
 
     ui->button1->setText("");

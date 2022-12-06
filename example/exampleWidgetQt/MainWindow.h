@@ -59,6 +59,11 @@ class MainWindow : public QMainWindow {
     */
     void newGamePopUp();
 
+    /*
+    * @brief Executes the computer player's turn
+    */
+    void computerMove();
+
  private slots:
    /**
     * @brief Action when button 1 is clicked
@@ -105,9 +110,11 @@ class MainWindow : public QMainWindow {
    */
    void on_button9_clicked();
 
+   void gameTypePopUp();
+
  private:
     Ui::MainWindow *ui;
-    std::unique_ptr<TicTacToeGame> game;
+    std::shared_ptr<IBoardGame> game;
     std::unique_ptr<IPlayer> player1;
     std::unique_ptr<IPlayer> player2;
     bool singleplayer = false;
