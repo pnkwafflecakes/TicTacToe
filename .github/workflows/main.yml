@@ -1,3 +1,4 @@
+---
 name: App Compiles
 on:
   pull_request:
@@ -21,7 +22,8 @@ jobs:
       - id: run_conan
         run: > 
           cd "${GITHUB_WORKSPACE}"/src/qtGUI &&
-          conan install --generator cmake_find_package --install-folder ../build/conan-dependencies .
+          conan install --generator cmake_find_package
+          --install-folder ../build/conan-dependencies .
       - id: cmake
         run: cd "${GITHUB_WORKSPACE}"/src/qtGUI && cmake -B../build -S.
       - id: make
