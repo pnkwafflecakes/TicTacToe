@@ -104,45 +104,56 @@ Inheritance diagram for IBoardGame:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3324167438ce8c4eb2d6da2e47b84b19"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a3324167438ce8c4eb2d6da2e47b84b19">assignPlayer</a> (<a class="el" href="class_i_player.html">IPlayer</a> *player)=0</td></tr>
-<tr class="separator:a3324167438ce8c4eb2d6da2e47b84b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f29d03bc9569fe93bdcf47e693cea6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a92f29d03bc9569fe93bdcf47e693cea6">assignPlayer</a> (std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt; player)=0</td></tr>
+<tr class="memdesc:a92f29d03bc9569fe93bdcf47e693cea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to assign players.  <a href="class_i_board_game.html#a92f29d03bc9569fe93bdcf47e693cea6">More...</a><br /></td></tr>
+<tr class="separator:a92f29d03bc9569fe93bdcf47e693cea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89f9b1bc99ef29686b14260ae9a78f8f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a89f9b1bc99ef29686b14260ae9a78f8f">checkEnd</a> ()=0</td></tr>
+<tr class="memdesc:a89f9b1bc99ef29686b14260ae9a78f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to check if the game is over.  <a href="class_i_board_game.html#a89f9b1bc99ef29686b14260ae9a78f8f">More...</a><br /></td></tr>
 <tr class="separator:a89f9b1bc99ef29686b14260ae9a78f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae069194ac062ce9f0df17042034e49af"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#ae069194ac062ce9f0df17042034e49af">createBoard</a> (int size)=0</td></tr>
+<tr class="memdesc:ae069194ac062ce9f0df17042034e49af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to create a board given a size.  <a href="class_i_board_game.html#ae069194ac062ce9f0df17042034e49af">More...</a><br /></td></tr>
 <tr class="separator:ae069194ac062ce9f0df17042034e49af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab08ed46ea627e55cb0217e7ee04ab43a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#ab08ed46ea627e55cb0217e7ee04ab43a">endTurn</a> ()=0</td></tr>
+<tr class="memdesc:ab08ed46ea627e55cb0217e7ee04ab43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to end the current players turn.  <a href="class_i_board_game.html#ab08ed46ea627e55cb0217e7ee04ab43a">More...</a><br /></td></tr>
 <tr class="separator:ab08ed46ea627e55cb0217e7ee04ab43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a599b460165221ba33f52270aa7949444"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a599b460165221ba33f52270aa7949444">modifyTile</a> (int x, int y, char letter)=0</td></tr>
+<tr class="memdesc:a599b460165221ba33f52270aa7949444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to modify tiles.  <a href="class_i_board_game.html#a599b460165221ba33f52270aa7949444">More...</a><br /></td></tr>
 <tr class="separator:a599b460165221ba33f52270aa7949444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a786083ef5abdae822039d245a8ea42cf"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a786083ef5abdae822039d245a8ea42cf">getBoard</a> ()=0</td></tr>
+<tr class="memdesc:a786083ef5abdae822039d245a8ea42cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get the board.  <a href="class_i_board_game.html#a786083ef5abdae822039d245a8ea42cf">More...</a><br /></td></tr>
 <tr class="separator:a786083ef5abdae822039d245a8ea42cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe96adb3e74563d0fe344ec913090f1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a3fe96adb3e74563d0fe344ec913090f1">getBoardSize</a> ()=0</td></tr>
+<tr class="memdesc:a3fe96adb3e74563d0fe344ec913090f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get the size of the board.  <a href="class_i_board_game.html#a3fe96adb3e74563d0fe344ec913090f1">More...</a><br /></td></tr>
 <tr class="separator:a3fe96adb3e74563d0fe344ec913090f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6470268c414793823ff88ccc79bd751"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_player.html">IPlayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#ab6470268c414793823ff88ccc79bd751">getCurrentPlayer</a> ()=0</td></tr>
-<tr class="separator:ab6470268c414793823ff88ccc79bd751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875bf62013e4cd24d53c81c361f69912"><td class="memItemLeft" align="right" valign="top">virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a875bf62013e4cd24d53c81c361f69912">getCurrentLetter</a> ()=0</td></tr>
+<tr class="memdesc:a875bf62013e4cd24d53c81c361f69912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get the current letter of a player.  <a href="class_i_board_game.html#a875bf62013e4cd24d53c81c361f69912">More...</a><br /></td></tr>
+<tr class="separator:a875bf62013e4cd24d53c81c361f69912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a5e9322c7a53ab53b6e1418ceb0d9c1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a4a5e9322c7a53ab53b6e1418ceb0d9c1">getTurn</a> ()=0</td></tr>
+<tr class="memdesc:a4a5e9322c7a53ab53b6e1418ceb0d9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get the current turn.  <a href="class_i_board_game.html#a4a5e9322c7a53ab53b6e1418ceb0d9c1">More...</a><br /></td></tr>
 <tr class="separator:a4a5e9322c7a53ab53b6e1418ceb0d9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cdf0ab5be16c23ddbfa200c5972b95e"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; <a class="el" href="class_i_player.html">IPlayer</a> *, <a class="el" href="class_i_player.html">IPlayer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a1cdf0ab5be16c23ddbfa200c5972b95e">getPlayers</a> ()=0</td></tr>
-<tr class="separator:a1cdf0ab5be16c23ddbfa200c5972b95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b03429e9a09d34bc6da0e39a31f2eec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a6b03429e9a09d34bc6da0e39a31f2eec">setBoard</a> (std::vector&lt; std::vector&lt; char &gt; &gt; <a class="el" href="class_i_board_game.html#a44c953788b90db5034c0877fbb8693a5">board</a>)=0</td></tr>
+<tr class="memdesc:a6b03429e9a09d34bc6da0e39a31f2eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to set the board.  <a href="class_i_board_game.html#a6b03429e9a09d34bc6da0e39a31f2eec">More...</a><br /></td></tr>
 <tr class="separator:a6b03429e9a09d34bc6da0e39a31f2eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a892c49856a823f99adac9b94e1ec0cc2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a892c49856a823f99adac9b94e1ec0cc2">setPlayers</a> (std::pair&lt; <a class="el" href="class_i_player.html">IPlayer</a> *, <a class="el" href="class_i_player.html">IPlayer</a> * &gt; i_players)=0</td></tr>
-<tr class="separator:a892c49856a823f99adac9b94e1ec0cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cecbfad3053f7b23b80531b5ffa12d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a1cecbfad3053f7b23b80531b5ffa12d5">setPlayers</a> (std::pair&lt; std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt;, std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt; &gt; i_players)=0</td></tr>
+<tr class="memdesc:a1cecbfad3053f7b23b80531b5ffa12d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to set the players.  <a href="class_i_board_game.html#a1cecbfad3053f7b23b80531b5ffa12d5">More...</a><br /></td></tr>
+<tr class="separator:a1cecbfad3053f7b23b80531b5ffa12d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a44c953788b90db5034c0877fbb8693a5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a44c953788b90db5034c0877fbb8693a5">board</a></td></tr>
 <tr class="separator:a44c953788b90db5034c0877fbb8693a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fe80b0a43b5b0777263f0378e0e0be6"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="class_i_player.html">IPlayer</a> *, <a class="el" href="class_i_player.html">IPlayer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a7fe80b0a43b5b0777263f0378e0e0be6">players</a></td></tr>
-<tr class="separator:a7fe80b0a43b5b0777263f0378e0e0be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3a4c1c19eb84c4ba312eb5f611b72c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_player.html">IPlayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#ab3a4c1c19eb84c4ba312eb5f611b72c6">currentPlayer</a></td></tr>
-<tr class="separator:ab3a4c1c19eb84c4ba312eb5f611b72c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c32919872c1706380c37ccb283d8ead"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt;, std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a1c32919872c1706380c37ccb283d8ead">players</a></td></tr>
+<tr class="separator:a1c32919872c1706380c37ccb283d8ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8de397bc238f584cacf7d4867aa89b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a6e8de397bc238f584cacf7d4867aa89b">currentLetter</a></td></tr>
+<tr class="separator:a6e8de397bc238f584cacf7d4867aa89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d855b8ab863e6db9128a58cb08154f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_board_game.html#a7d855b8ab863e6db9128a58cb08154f9">turn</a></td></tr>
 <tr class="separator:a7d855b8ab863e6db9128a58cb08154f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3324167438ce8c4eb2d6da2e47b84b19" name="a3324167438ce8c4eb2d6da2e47b84b19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3324167438ce8c4eb2d6da2e47b84b19">&#9670;&nbsp;</a></span>assignPlayer()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Class for BoardGame objects </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a92f29d03bc9569fe93bdcf47e693cea6" name="a92f29d03bc9569fe93bdcf47e693cea6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f29d03bc9569fe93bdcf47e693cea6">&#9670;&nbsp;</a></span>assignPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +164,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void IBoardGame::assignPlayer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_player.html">IPlayer</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt;&#160;</td>
           <td class="paramname"><em>player</em></td><td>)</td>
           <td></td>
         </tr>
@@ -165,7 +176,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#aaefd221a4c5e9f0bbaede66cdb9a4f9d">TicTacToeGame</a>.</p>
+<p>Used to assign players. </p>
+
+<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#abbb99f6bede8f3dc968b246bdc6b1081">TicTacToeGame</a>.</p>
 
 </div>
 </div>
@@ -191,6 +204,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Used to check if the game is over. </p>
 
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a057e05a487394deb6af5372b2049de63">TicTacToeGame</a>.</p>
 
@@ -220,6 +235,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Used to create a board given a size. </p>
+
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a2aa68367fe20075b20bc737b5978f1b9">TicTacToeGame</a>.</p>
 
 </div>
@@ -246,6 +263,8 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Used to end the current players turn. </p>
 
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a77fbb651955f38ee0308875d759359a2">TicTacToeGame</a>.</p>
 
@@ -274,6 +293,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Used to get the board. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns a vector as the board </dd></dl>
+
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a96c22de7dcb91e78f97e7b6fc1d387fb">TicTacToeGame</a>.</p>
 
 </div>
@@ -301,12 +323,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Used to get the size of the board. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the size of the board </dd></dl>
+
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a1d991c7778ac00353cf0e7d1055281cb">TicTacToeGame</a>.</p>
 
 </div>
 </div>
-<a id="ab6470268c414793823ff88ccc79bd751" name="ab6470268c414793823ff88ccc79bd751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6470268c414793823ff88ccc79bd751">&#9670;&nbsp;</a></span>getCurrentPlayer()</h2>
+<a id="a875bf62013e4cd24d53c81c361f69912" name="a875bf62013e4cd24d53c81c361f69912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875bf62013e4cd24d53c81c361f69912">&#9670;&nbsp;</a></span>getCurrentLetter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +340,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_i_player.html">IPlayer</a> * IBoardGame::getCurrentPlayer </td>
+          <td class="memname">virtual char IBoardGame::getCurrentLetter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -328,34 +353,10 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a75e4df42fb0b0e1dace9d60cd4e9fd05">TicTacToeGame</a>.</p>
+<p>Used to get the current letter of a player. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return the letter </dd></dl>
 
-</div>
-</div>
-<a id="a1cdf0ab5be16c23ddbfa200c5972b95e" name="a1cdf0ab5be16c23ddbfa200c5972b95e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cdf0ab5be16c23ddbfa200c5972b95e">&#9670;&nbsp;</a></span>getPlayers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::pair&lt; <a class="el" href="class_i_player.html">IPlayer</a> *, <a class="el" href="class_i_player.html">IPlayer</a> * &gt; IBoardGame::getPlayers </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a428bfd3514f86e4917c13371a1ef6455">TicTacToeGame</a>.</p>
+<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a97ed219793116e3405fdc69124e883ce">TicTacToeGame</a>.</p>
 
 </div>
 </div>
@@ -381,6 +382,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Used to get the current turn. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return the current turn </dd></dl>
 
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#af49429b6dc3eebaa6818d7711159c87f">TicTacToeGame</a>.</p>
 
@@ -426,6 +430,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Used to modify tiles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x position on the board </td></tr>
+    <tr><td class="paramname">y</td><td>The y position on the board </td></tr>
+    <tr><td class="paramname">letter</td><td>The letter to be placed in the tile, X or O </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a9f76fbc2f0ba6308e94a53e5a66f3133">TicTacToeGame</a>.</p>
 
 </div>
@@ -454,12 +468,20 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Used to set the board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>The board which will replace the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#a5ca36fe2df999b5cc31e2ed50e4f47f6">TicTacToeGame</a>.</p>
 
 </div>
 </div>
-<a id="a892c49856a823f99adac9b94e1ec0cc2" name="a892c49856a823f99adac9b94e1ec0cc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a892c49856a823f99adac9b94e1ec0cc2">&#9670;&nbsp;</a></span>setPlayers()</h2>
+<a id="a1cecbfad3053f7b23b80531b5ffa12d5" name="a1cecbfad3053f7b23b80531b5ffa12d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cecbfad3053f7b23b80531b5ffa12d5">&#9670;&nbsp;</a></span>setPlayers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -470,7 +492,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void IBoardGame::setPlayers </td>
           <td>(</td>
-          <td class="paramtype">std::pair&lt; <a class="el" href="class_i_player.html">IPlayer</a> *, <a class="el" href="class_i_player.html">IPlayer</a> * &gt;&#160;</td>
+          <td class="paramtype">std::pair&lt; std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt;, std::unique_ptr&lt; <a class="el" href="class_i_player.html">IPlayer</a> &gt; &gt;&#160;</td>
           <td class="paramname"><em>i_players</em></td><td>)</td>
           <td></td>
         </tr>
@@ -482,7 +504,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#ab3b7b28d1b615e471c0a33c8e103851a">TicTacToeGame</a>.</p>
+<p>Used to set the players. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i_players</td><td>The players we have </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_tic_tac_toe_game.html#acbc67632d9b03515c177a861161589ce">TicTacToeGame</a>.</p>
 
 </div>
 </div>
@@ -501,28 +531,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab3a4c1c19eb84c4ba312eb5f611b72c6" name="ab3a4c1c19eb84c4ba312eb5f611b72c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3a4c1c19eb84c4ba312eb5f611b72c6">&#9670;&nbsp;</a></span>currentPlayer</h2>
+<a id="a6e8de397bc238f584cacf7d4867aa89b" name="a6e8de397bc238f584cacf7d4867aa89b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e8de397bc238f584cacf7d4867aa89b">&#9670;&nbsp;</a></span>currentLetter</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_i_player.html">IPlayer</a>* IBoardGame::currentPlayer</td>
+          <td class="memname">char IBoardGame::currentLetter</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a7fe80b0a43b5b0777263f0378e0e0be6" name="a7fe80b0a43b5b0777263f0378e0e0be6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fe80b0a43b5b0777263f0378e0e0be6">&#9670;&nbsp;</a></span>players</h2>
+<a id="a1c32919872c1706380c37ccb283d8ead" name="a1c32919872c1706380c37ccb283d8ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c32919872c1706380c37ccb283d8ead">&#9670;&nbsp;</a></span>players</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt;<a class="el" href="class_i_player.html">IPlayer</a>*, <a class="el" href="class_i_player.html">IPlayer</a>*&gt; IBoardGame::players</td>
+          <td class="memname">std::pair&lt;std::unique_ptr&lt;<a class="el" href="class_i_player.html">IPlayer</a>&gt;, std::unique_ptr&lt;<a class="el" href="class_i_player.html">IPlayer</a>&gt; &gt; IBoardGame::players</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -552,7 +582,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_i_board_game.html">IBoardGame</a></li>
-    <li class="footer">Generated on Tue Dec 6 2022 01:16:49 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Tue Dec 6 2022 01:40:23 for TicTacToe by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
