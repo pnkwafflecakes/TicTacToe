@@ -50,8 +50,9 @@ HumanPlayer::HumanPlayer(char iLetter, int playerNum) {
  * @param y The y position on the board
  * @param game The board which the game is played on
 */
-void HumanPlayer::clickTile(int x, int y, std::unique_ptr<IBoardGame> game) {
+std::pair<int, int> HumanPlayer::clickTile(int x, int y, std::shared_ptr<IBoardGame> game) {
     game->modifyTile(x, y, letter);
+    return std::pair<int, int>(x, y);
 }
 
 /**

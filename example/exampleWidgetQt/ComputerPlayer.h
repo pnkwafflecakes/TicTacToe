@@ -46,7 +46,7 @@ class ComputerPlayer : public IPlayer {
          * @param y The y position on the board
          * @param game The board which the game is played on
         */
-        void clickTile(int x, int y, std::unique_ptr<IBoardGame> game);
+        std::pair<int, int> clickTile(int x, int y, std::shared_ptr<IBoardGame> game);
 
         /**
          * @brief Method to generate a move
@@ -54,7 +54,7 @@ class ComputerPlayer : public IPlayer {
          * @param game The board which the game is played on
          * @return Returns a pair of coordinates (x, y)
         */
-        std::pair<int, int> generateMove(IBoardGame* game);
+        std::pair<int, int> generateMove(std::shared_ptr<IBoardGame> game);
 
         /**
          * @brief Get the difficulty of the player

@@ -54,8 +54,10 @@ ComputerPlayer::~ComputerPlayer() {
  * @param y The y position on the board
  * @param game The board which the game is played on
 */
-void ComputerPlayer::clickTile(int x, int y, std::unique_ptr<IBoardGame> game) {
-    game->modifyTile(x, y, this->letter);
+std::pair<int, int> ComputerPlayer::clickTile(int x, int y, std::shared_ptr<IBoardGame> game) {
+    std::pair<int, int> coords = generateMove(game);
+    game->modifyTile(coords.first, coords.second, this->letter);
+    return coords;
 }
 
 /**
@@ -63,7 +65,7 @@ void ComputerPlayer::clickTile(int x, int y, std::unique_ptr<IBoardGame> game) {
  * 
  * @param game The board which the game is played on
 */
-std::pair<int, int> ComputerPlayer::generateMove(IBoardGame* game) {
+std::pair<int, int> ComputerPlayer::generateMove(std::shared_ptr<IBoardGame> game) {
     std::vector<std::vector<char>> board = game->getBoard();
     std::vector<std::pair<int, int>> moves;
     if (difficulty == "easy") {

@@ -32,7 +32,7 @@ class IPlayer {
      * @param y The y position on the board
      * @param game The board which the game is played on
     */
-    virtual void clickTile(int x, int y, std::unique_ptr<IBoardGame> game) = 0;
+    virtual std::pair<int, int> clickTile(int x, int y, std::shared_ptr<IBoardGame> game) = 0;
 
     /**
      * @brief Get the letter of the player
