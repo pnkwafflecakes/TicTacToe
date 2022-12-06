@@ -11,6 +11,7 @@
 #pragma once
 
 #include <QMainWindow>
+#include <memory>
 #include "TicTacToeGame.h"
 
 QT_BEGIN_NAMESPACE
