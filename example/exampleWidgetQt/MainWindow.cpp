@@ -324,8 +324,8 @@ void MainWindow::newGame() {
         game.reset(new TicTacToeGame());
         player1.reset(new HumanPlayer('X', 1));
         player2.reset(new HumanPlayer('O', 2));
-        std::pair<IPlayer, IPlayer> players(player1, player2);
-        game.get()->setPlayers();
+        game->assignPlayer(std::move(player1));
+        game->assignPlayer(std::move(player2));
     }
 
     ui->button1->setText("");
