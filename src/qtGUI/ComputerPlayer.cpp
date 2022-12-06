@@ -1,12 +1,14 @@
 /**
- * @file 
- * @author 
- * @brief 
- * @version 
- * @date 
- * 
+ * @file ComputerPlayer.cpp
+ * @author Cole Kepford
+ * @brief Implementation of the ComputerPlayer class
+ * @version 1.0
+ * @date 2022-12-05
+ *
  * @copyright Copyright (c) 2022
  */
+
+// test
 
 #include "ComputerPlayer.h"
 #include <list>
@@ -16,22 +18,22 @@
 #include <memory>
 #include <string>
 
-
-/**
- * @brief Implemented constructor for ComputerPlayer using custom parameters
- * 
- * @param letter The letter to be assinged to this player 'X' or 'O'
- * @param playerNum The number of this player X or O
- * @param difficulty The factor that determines how hard the computer is to play against
-*/
+ /**
+  * @brief Implemented constructor for ComputerPlayer using custom parameters
+  *
+  * @param letter The letter to be assinged to this player 'X' or 'O'
+  * @param playerNum The number of this player X or O
+  * @param difficulty The factor that determines how hard the computer is to play against
+ */
 ComputerPlayer::ComputerPlayer(char iLetter, int iPlayerNum,
-                                std::string const& iDifficulty) {
-    if (iLetter == 'X' || iLetter== 'x' || iLetter == 'O' || iLetter == 'o') {
+    std::string const& iDifficulty) {
+    if (iLetter == 'X' || iLetter == 'x' || iLetter == 'O' || iLetter == 'o') {
         letter = static_cast<char>(toupper(iLetter));
     } else {
         letter = 0;
         throw std::invalid_argument("Invalid letter");
     }
+
     playerNum = iPlayerNum;
     difficulty = iDifficulty;
     type = "computer";
@@ -52,18 +54,18 @@ ComputerPlayer::~ComputerPlayer() {
 
 /**
  * @brief Call modifyTile from game to check and modify a tile after it is clicked
- * 
+ *
  * @param x The x position on the board
  * @param y The y position on the board
  * @param game The board which the game is played on
 */
-void ComputerPlayer::clickTile(int x, int y, std::unique_ptr<IBoardGame> game) {
-    game->modifyTile(x, y, this->letter);
+void ComputerPlayer::clickTile(int x, int y, std::shared_ptr<IBoardGame> game) {
+    game.get()->modifyTile(x, y, this->letter);
 }
 
 /**
  * @brief Generate a move on easy difficulty where ComputerPlayer picks a random tile
- * 
+ *
  * @param game The board which the game is played on
 */
 std::pair<int, int> ComputerPlayer::generateMove(IBoardGame* game) {
@@ -80,7 +82,7 @@ std::pair<int, int> ComputerPlayer::generateMove(IBoardGame* game) {
             }
         }
         // Generate random possible move
-        int moveIndex = rand() % moves.size();
+        int moveIndex = std::rand() % moves.size();
         return moves[moveIndex];
     }
     return std::pair<int, int>(-1, -1);
