@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7ecomputerplayer_0',['~ComputerPlayer',['../class_computer_player.html#a20f26361bbb66b292e7f0792292e4250',1,'ComputerPlayer']]],
-  ['_7emainwindow_1',['~MainWindow',['../class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
-  ['_7etictactoegame_2',['~TicTacToeGame',['../class_tic_tac_toe_game.html#a028716cda9a10738d26258a8fa4f1a3e',1,'TicTacToeGame']]]
+  ['tictactoegame_0',['TicTacToeGame',['../class_tic_tac_toe_game.html#a7b12caa261cfc2f3c5550981264176a3',1,'TicTacToeGame::TicTacToeGame()'],['../class_tic_tac_toe_game.html#a89e3740bfd4a22061198859dabeb7c73',1,'TicTacToeGame::TicTacToeGame(std::pair&lt; std::unique_ptr&lt; IPlayer &gt;, std::unique_ptr&lt; IPlayer &gt; &gt; i_players)'],['../class_tic_tac_toe_game.html#a7cc154e10fd82bfb60a33407afd18d77',1,'TicTacToeGame::TicTacToeGame(int size, std::pair&lt; std::unique_ptr&lt; IPlayer &gt;, std::unique_ptr&lt; IPlayer &gt; &gt; i_players)']]]
 ];

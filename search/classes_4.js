@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_0',['MainWindow',['../class_main_window.html',1,'']]]
+  ['playerfactory_0',['PlayerFactory',['../class_player_factory.html',1,'']]]
 ];

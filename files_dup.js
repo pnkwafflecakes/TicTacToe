@@ -14,16 +14,20 @@ var files_dup =
     [ "IPlayer.h", "_i_player_8h.html", [
       [ "IPlayer", "class_i_player.html", "class_i_player" ]
     ] ],
+    [ "IPlayerFactory.h", "_i_player_factory_8h.html", [
+      [ "IPlayerFactory", "class_i_player_factory.html", "class_i_player_factory" ]
+    ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "MainWindow.cpp", "_main_window_8cpp.html", null ],
     [ "MainWindow.h", "_main_window_8h.html", [
       [ "MainWindow", "class_main_window.html", "class_main_window" ]
     ] ],
-    [ "pch.cpp", "pch_8cpp.html", null ],
-    [ "pch.h", "pch_8h.html", null ],
+    [ "PlayerFactory.cpp", "_player_factory_8cpp.html", "_player_factory_8cpp" ],
+    [ "PlayerFactory.h", "_player_factory_8h.html", [
+      [ "PlayerFactory", "class_player_factory.html", "class_player_factory" ]
+    ] ],
     [ "TicTacToeGame.cpp", "_tic_tac_toe_game_8cpp.html", null ],
     [ "TicTacToeGame.h", "_tic_tac_toe_game_8h.html", [
       [ "TicTacToeGame", "class_tic_tac_toe_game.html", "class_tic_tac_toe_game" ]
-    ] ],
-    [ "TicTacToeGameTests.cpp", "_tic_tac_toe_game_tests_8cpp.html", "_tic_tac_toe_game_tests_8cpp" ]
+    ] ]
 ];
