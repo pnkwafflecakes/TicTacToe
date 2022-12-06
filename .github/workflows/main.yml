@@ -1,4 +1,3 @@
-
 name: App Compiles
 on:
   pull_request:
@@ -8,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - id: Qt
+      - id: qt
         uses: jurplel/install-qt-action@v2
         with:
           modules: qtsvg
@@ -20,17 +19,9 @@ jobs:
       - id: run_conan
         run: cd "${GITHUB_WORKSPACE}"/example/exampleWidgetQt && conan install --generator cmake_find_package --install-folder ../build/conan-dependencies .
       - id: cmake
-        run: cd "${GITHUB_WORKSPACE}"/example/exampleWidgetQt && cmake -B../build -S.
+        run: cd "${GITHUB_WORKSPACE}"/GUI/qtGUI && cmake -B../build -S.
       - id: make
-        run: cd "${GITHUB_WORKSPACE}"/example/build && make
-      - name: Run Tests
-        run: |
-          mkdir build
-          cd build && ctest
-          #cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-Werror" ..
-          #make
-          #/home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
-
+        run: cd "${GITHUB_WORKSPACE}"/GUI/build && make
   lint:
     runs-on: ubuntu-latest
     steps:
