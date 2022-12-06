@@ -12,6 +12,9 @@
 #include <list>
 #include <vector>
 #include <stdexcept>
+#include <utility>
+#include <memory>
+#include <string>
 
 
 /**
