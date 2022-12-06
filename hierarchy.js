@@ -7,7 +7,7 @@ var hierarchy =
       [ "ComputerPlayer", "class_computer_player.html", null ],
       [ "HumanPlayer", "class_human_player.html", null ]
     ] ],
-    [ "testing::Test", null, [
-      [ "GameTests", "class_game_tests.html", null ]
+    [ "QMainWindow", null, [
+      [ "MainWindow", "class_main_window.html", null ]
     ] ]
 ];
